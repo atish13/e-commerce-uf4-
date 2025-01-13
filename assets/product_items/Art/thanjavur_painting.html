@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+
+    <!-- <link rel="stylesheet" href="assets/css/templatemo-hexashop.css"> -->
+    <link rel="stylesheet" href="../../css/templatemo-hexashop.css">
+
+    <!-- <link rel="stylesheet" href="assets/css/owl-carousel.css"> -->
+    <link rel="stylesheet" href="../../css/owl-carousel.css">
+
+    <!-- <link rel="stylesheet" href="assets/css/lightbox.css"> -->
+    <link rel="stylesheet" href="../../css/lightbox.css">
+
+    <!-- <link rel="stylesheet" href="assets/css/lightbox"> -->
+    <!-- <link rel="stylesheet" href="../../css/lig"> -->
+
+    <style>
+
+        .small-img-group{
+
+            display: flex;
+            justify-content: space-between;
+        }
+        
+
+        .small-img-col{
+
+            flex-basis: 20%;
+            cursor: pointer;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        .sproduct input{
+
+            width: 50px;
+            height: 40px;
+            padding-left: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        
+
+        .sproduct input:focus{
+
+            outline: none;
+        }
+
+        .buy-btn{
+
+
+            
+            /* background: rgb(170, 101, 75); */
+            opacity: 1;
+            transition: 0.3s all;
+        }
+
+        #pro img{
+
+            height: 400px;
+            width: 100px;
+        }
+        .category-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            overflow: hidden;
+
+           
+        }
+        /* .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        } */
+        .category-image {
+            height: 170px;
+            width: 150px;
+            object-fit: cover;
+        }
+        .category-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .category-description {
+            color: #6c757d;
+        }
+  
+
+    .card-body {
+        min-height: 150px; /* Adjust based on your content */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+    .card-body a{
+
+        height: 40px;
+        width: 150px;
+       
+      
+
+    }
+    
+    .card{
+        width: 200px;
+    }
+    
+        .fix-img {
+        background-image: url('https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713');
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+         background-attachment: fixed;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    </style>
+
+
+</head>
+<body>
+
+    <!-- <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>   -->
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area fixed-top" style="position:fixed;">
+        <div class="container-fluid bg-dark">
+            <!-- <div class="topbar"> -->
+            <div class="container">
+                <div class="row ">
+                    <div class="col-6 d-flex justify-content-around">
+                        <p class="text-white">abc2024@gmail.com</p>
+                        <p class="text-white ">+91 843238493</p>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <a class="text-white mx-3" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="text-white mx-3" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="text-white mx-3" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a class="text-white mx-3" href="#"><i class="fa-brands fa-instagram"></i><a>
+
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+            
+        </div>
+        
+            <div class="container-fluid bg-white">
+                <div class="container">
+                <div class="row  ">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <a href="index.html" class="logo">
+                                <!-- Include your logo image -->
+                                <img src="../../images/Logo.png" alt="Unica4U Logo" style="height: 90px;">
+                            </a>
+                            <!-- ***** Logo Start ***** -->
+                            <a href="index.html" class="logo">
+                                <!-- <img src="assets/images/logo.png">  -->
+                                <!-- <img src="assets/images/file.jpg">  -->
+                            </a>
+                            <!-- <a href="index.html">
+                                Unica4U
+                            </a> -->
+                            <!-- <a href="index.html" style="padding-left: 10px;padding: 30px; text-align:center; font-size: 30px; font-weight: bold; color: black;">
+                                Unica4U
+                            </a>
+                             -->
+                            
+                            
+                         
+                            <!-- ***** Logo End ***** -->
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav">
+                                <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                                <li class="scroll-to-section"><a href="#men">Products</a></li>
+                                <li class="scroll-to-section"><a href="#women">Carts & Wishlist</a></li>
+                                <li class="scroll-to-section"><a href="#kids">Orders</a></li>
+                                <li class="submenu">
+                                    <a href="javascript:;">Pages</a>
+                                    <ul>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="products.html">Products</a></li>
+                                        <li><a href="single-product.html">Single Product</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:;">Features</a>
+                                    <ul>
+                                        <li><a href="#">Features Page 1</a></li>
+                                        <li><a href="#">Features Page 2</a></li>
+                                        <li><a href="#">Features Page 3</a></li>
+                                        <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
+                                    </ul>
+                                </li>
+                                <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+                            </ul>        
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <section class="container sproduct my-5 pt-5">
+
+    <div class="row mt-5">
+        <div class="col-lg-1 col-md-2 col-2 text-center">
+            <ul type="none" class="">
+                <li>
+                    <img src="../../images/sm-img/product1.jpg" alt="" class="h-75 w-75 border border-dark my-2" onmouseover="showImg('../../images/sm-img/product1.jpg')" 
+                        onmouseout="defaultImg()" >
+                </li>
+                    <img src="../../images/sm-img/product2.jpg" alt="" class="h-75 w-75 border border-dark my-2" onmouseover="showImg('../../images/sm-img/product2.jpg')" 
+                        onmouseout="defaultImg()" >
+                </li>
+                <li>
+                    <img src="../../images/sm-img/product4.jpg" alt="" class="h-75 w-75 border border-dark my-2" onmouseover="showImg('../../images/sm-img/product4.jpg')" 
+                    onmouseout="defaultImg()">
+                </li>
+                <li>
+                    <img src="../../images/sm-img/product3.jpg" alt="" class="h-75 w-75 border border-dark my-2" onmouseover="showImg('../../images/sm-img/product3.jpg')" 
+                    onmouseout="defaultImg()">
+                </li>
+                <li>
+                    <img src="../../images/sm-img/product5.jpg" alt="" class="h-75 w-75 border border-dark my-2" onmouseover="showImg('../../images/sm-img/product5.jpg')" 
+                    onmouseout="defaultImg()">
+                </li>
+                <!-- <li>
+                    <img src="./assets/images/sm-img/video.png" alt="" class="h-100 w-100 border border-dark my-2" onmouseover="showImg('./assets/images/sm-img/video.png')" 
+                    onmouseout="defaultImg()">
+                </li> -->
+            </ul>
+        </div>
+        <div class="col-lg-5 col-md-6 col-10 " id="pro">
+
+            <img  class="img-fluid w-100 h-75 fix-img" src=https://kotart.in/cdn/shop/files/CanvasAS71243.jpg?v=1721719493"  id="MainImg">
+             
+        </div>
+        <div class="col-lg-5 col-md-12 col-12 px-4  overflow-scroll " style="height: 80vh;scrollbar-width: none;">
+
+            <h6>Home / Art</h6>
+            <h3 id="Main-title">Thanjavur Painting</h3>
+            <h2 id="Main-price">₹500.00 INR</h2>
+
+            <input type="number" value="1">
+            <button class="buy-btn btn btn-primary">Add To Cart</button>
+
+            <h4 class="mt-5 mb-4">Product Details</h4>
+            <div class="row d-flex">
+                 <div class="col-2 col-md-6 border-bottom border-bottom-dark  ">
+                    <ul type="none" >
+                        <li class="my-2">
+                            <span class="fw-bold">Material type
+                            </span>
+                            <!-- <span class="mx-5">Metal</span> -->
+                        </li>
+                        <li class="my-2">
+                            <span class="fw-bold">Metal type
+                            </span>
+                            <!-- <span class="mx-5">Alloy</span> -->
+                        </li>
+                        <li class="my-2">
+                            <span class="fw-bold ">Occasion type</span>
+                            <!-- <span class="mx-5">Communion</span> -->
+                        </li>
+                        <li class="my-2">
+                            <span class="fw-bold ">Gem type
+                            </span>
+                            <!-- <span class="mx-5">Ruby</span> -->
+                        </li>
+                        <li class="my-2">
+                            <span class="fw-bold ">Item type name
+                            </span>
+                            <!-- <span class="mx-5">Earrings</span> -->
+                        </li>
+                        <li class="my-2">
+                            <span class="fw-bold ">Country of Origin
+                            </span>
+                            <!-- <span class="mx-5">India -->
+                            </span>
+                        </li>
+                    </ul>
+                    </div>
+                <div class="col-2 col-md-6 border-bottom border-bottom-dark ">
+                <ul type="none" >
+                <li class="my-2">
+                    <!-- <span class="fw-bold">Material type
+                    </span> -->
+                    <span class="">Metal</span>
+                </li>
+                <li class="my-2">
+                    <!-- <span class="fw-bold">Metal type
+                    </span> -->
+                    <span class="">Alloy</span>
+                </li>
+                <li class="my-2">
+                    <!-- <span class="fw-bold ">Occasion type</span> -->
+                    <span class="">Communion</span>
+                </li>
+                <li class="my-2">
+                    <!-- <span class="fw-bold ">Gem type
+                    </span> -->
+                    <span class="">Ruby</span>
+                </li>
+                <li class="my-2">
+                    <!-- <span class="fw-bold ">Item type name
+                    </span> -->
+                    <span class="">Earrings</span>
+                </li>
+                <li class="my-2">
+                    <!-- <span class="fw-bold ">Country of Origin
+                    </span> -->
+                    <span class="">India
+                    </span>
+                </li>
+            </ul>
+            </div>
+          
+            </div>
+            <div class="border-bottom border-bottom-dark">
+                <h4 class="mt-5">About this item</h4>
+                <ul style="list-style: disc;">
+                    <li>
+                        <p class="fs-6 m-2">1. Features:- From selecting an perfect out fit for her tradtional and antique jhumkas earring getting perfect picture for her. this jhumka earring is gold plated micro gold oxodized pearl beaded enhance your beauty this earring are suiit any outfit you wear</p>
+                    </li>
+                    <li>
+                       <p class="fs-6 m-2">2. The pearl and red and green turquish stone use. also micro black oxodised gold plateed jhumkas look antique and traditional.</p>
+                    </li>
+                    <li>
+                        <p class="fs-6 m-2">3. Thease earring made by alloys that skin friendly also nickel and led free. </p>
+                     </li>
+                    <li>
+                        <p class="fs-6 m-2">4. This stylish jhumkas also Kammal is Golden temple jewellery collection.</p>
+                     </li>
+                    <li>
+                        <p class="fs-6 m-2">5. Present time this jhumki earring most commonly wear by indian women to go in the religious occassion and wear in the weading, enguagement etc for this traditional look.</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <h4 class="mt-5 mb-4">Additional Informations</h4>
+            <div class="row d-flex">
+                <div class="col-2 col-md-6 border-bottom border-bottom-dark  ">
+                   <ul type="none" >
+                       <li class="my-2">
+                           <span class="fw-bold">Manufacturer
+                           </span>
+                           <!-- <span class="mx-5">Metal</span> -->
+                       </li>
+                       <li class="my-2">
+                           <span class="fw-bold">Packer
+                           </span>
+                           <!-- <span class="mx-5">Alloy</span> -->
+                       </li>
+                       <li class="my-2">
+                           <span class="fw-bold ">Item Weight</span>
+                           <!-- <span class="mx-5">Communion</span> -->
+                       </li>
+                       <li class="my-2">
+                           <span class="fw-bold ">Net Quantity
+                           </span>
+                           <!-- <span class="mx-5">Ruby</span> -->
+                       </li>
+                       <li class="my-2">
+                           <span class="fw-bold ">Generic Name
+                           </span>
+                           <!-- <span class="mx-5">Earrings</span> -->
+                       </li>
+                    
+                   </ul>
+                   </div>
+               <div class="col-2 col-md-6 border-bottom border-bottom-dark ">
+               <ul type="none" >
+               <li class="my-2">
+                   <!-- <span class="fw-bold">Material type
+                   </span> -->
+                   <span class="">Flaring jewellers, Flaring jewellers</span>
+               </li>
+               <li class="my-2">
+                   <!-- <span class="fw-bold">Metal type
+                   </span> -->
+                   <span class="">Flaring jewellers
+                </span>
+               </li>
+               <li class="my-2">
+                   <!-- <span class="fw-bold ">Occasion type</span> -->
+                   <span class="">30 g
+                </span>
+               </li>
+               <li class="my-2">
+                   <!-- <span class="fw-bold ">Gem type
+                   </span> -->
+                   <span class="">1.00 pair
+                </span>
+               </li>
+               
+            
+           </ul>
+           </div>
+         
+           </div>
+
+
+            <!-- <span>Earrings are the ultimate style accessory. Every woman will fall in love with these in-season earrings. In an endeavour to delightfully surprise its customers, travels around the country to procure exquisite and rare pieces of ornamentation. World-class Craftsmanship.</span> -->
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<div class="container my-5  py-5">
+    <h2 class="text-center mb-4">Featured Categories </h2>
+
+    <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card" style="width: 18rem;">
+                <img src="https://rukminim2.flixcart.com/image/612/612/l51d30w0/earring/s/o/j/na-black-jhumka-qizmi-original-imagcsu8qrjemned.jpeg?q=70" alt="Product 1" class="card-img-top category-image" id="small-img">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card" style="width: 18rem;">
+                <img src="https://rukminim2.flixcart.com/image/612/612/l51d30w0/earring/s/o/j/na-black-jhumka-qizmi-original-imagcsu8qrjemned.jpeg?q=70" alt="Product 1" class="card-img-top category-image" id="small-img">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card" style="width: 18rem;">
+                <img src="https://rukminim2.flixcart.com/image/612/612/l51d30w0/earring/s/o/j/na-black-jhumka-qizmi-original-imagcsu8qrjemned.jpeg?q=70" alt="Product 1" class="card-img-top category-image" id="small-img">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> -->
+
+       <div class="d-flex flex-wrap justify-content-center gap-2">
+        <!-- Category 1 -->
+         <div class="card">
+        <div class="custom-column">
+            <div class="custom-card  p-3 text-center">
+                <img src="https://rukminim2.flixcart.com/image/612/612/l51d30w0/earring/s/o/j/na-black-jhumka-qizmi-original-imagcsu8qrjemned.jpeg?q=70" alt="Product 1" class="card-img-top category-image" id="small-img">
+                <h5 class="p-2">Category 1</h5>
+                <p class="card-text text-truncate">Details about this category.Details about this categoryDetails about this categoryDetails about this category
+                    Details about this categoryDetails about this categoryDetails about this categoryDetails about this categoryDetails about this category
+                </p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/612/612/l51d30w0/earring/s/o/j/na-black-jhumka-qizmi-original-imagcsu8qrjemned.jpeg?q=70','₹500.00 INR')">View Details</button>
+            </div>
+        </div>
+        </div>
+        <!-- Category 2 -->
+         <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/earring/t/t/9/na-rladsqkkj-katniss-original-imah3777hce5xzaf.jpeg?q=70" alt="" class="card-img-top category-image">
+                <h5>Category 2</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/612/612/xif0q/earring/t/t/9/na-rladsqkkj-katniss-original-imah3777hce5xzaf.jpeg?q=70','₹400.00 INR')">View Details</button>
+            
+            </div>
+        </div>
+        </div>
+        <!-- Category 3 -->
+         <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+
+                <img src="https://images.meesho.com/images/products/177544708/mjios_400.webp" alt="" class="card-img-top category-image">
+                <h5>Category 3</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/177544708/mjios_400.webp','₹500.00 INR')">View Details</button>
+
+            </div>
+        </div>
+         </div>
+        <!-- Category 4 -->
+         <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.C5-9WkuAj5iwpIeT4dWExQHaHa&pid=Api&P=0&h=220" alt="" class="card-img-top category-image">
+                <h5>Category 4</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://tse3.mm.bing.net/th?id=OIP.C5-9WkuAj5iwpIeT4dWExQHaHa&pid=Api&P=0&h=220','₹200.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        <!-- Category 5 -->
+         <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://images.meesho.com/images/products/326870226/8rqcm_400.webp" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/326870226/8rqcm_400.webp','₹300.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://images.meesho.com/images/products/326870226/8rqcm_400.webp" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/326870226/8rqcm_400.webp','₹350.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+        <img src="https://images.meesho.com/images/products/395993664/b5vnp_400.webp" alt=""  class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/395993664/b5vnp_400.webp','₹450.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/earring/t/t/9/na-rladsqkkj-katniss-original-imah3777hce5xzaf.jpeg?q=70" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/612/612/xif0q/earring/t/t/9/na-rladsqkkj-katniss-original-imah3777hce5xzaf.jpeg?q=70','₹250.00 INR')">View Details</button>
+
+            </div>
+        </div>
+         </div>
+
+         <div class="card">
+        <div class="custom-column pt-4 pb-3 pl-2 pr-2 text-center">
+            <div class="custom-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.KgUbJPw0NjPJgRfZ912rhAHaHa&pid=Api&P=0&h=220" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://tse3.mm.bing.net/th?id=OIP.KgUbJPw0NjPJgRfZ912rhAHaHa&pid=Api&P=0&h=220','₹450.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://rukminim2.flixcart.com/image/312/312/kxp0mfk0/shopsy-earring/u/8/j/02111-lezara-original-imag9jr4mwhehkj5.jpeg?q=70&crop=false" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/312/312/kxp0mfk0/shopsy-earring/u/8/j/02111-lezara-original-imag9jr4mwhehkj5.jpeg?q=70&crop=false','₹470.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://images.meesho.com/images/products/375539068/wuuin_400.webp" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/375539068/wuuin_400.webp','₹550.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://images.meesho.com/images/products/401147093/xneaf_400.webp" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/401147093/xneaf_400.webp','₹250.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://images.meesho.com/images/products/452976609/d9lpb_400.webp" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/452976609/d9lpb_400.webp','₹450.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+
+
+      <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://m.media-amazon.com/images/I/71q4vKyTrlL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://m.media-amazon.com/images/I/71q4vKyTrlL._AC_UL480_FMwebp_QL65_.jpg','₹400.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://images.meesho.com/images/products/460467062/u3zky_400.webp" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/460467062/u3zky_400.webp','₹650.00 INR')">View Details</button>
+            </div>
+        </div>
+        </div>  
+            </div>
+ 
+        </div>
+         </div>
+
+    <div class="d-flex justify-content-center">
+            <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/3879b10b-4d20-41ca-a5ba-c42699ef0fab.__CR0,0,970,600_PT0_SX970_V1___.png" alt="" class="img-fluid w-75 mx-5">
+        </div>
+
+        <div  style="display:grid; justify-content:center;">
+            <h3 class="mx-5 mt-5 mb-4">Product Details</h3>
+                <ul>
+                    <li class="my-2"><span class="fw-bold m-2">Package Dimensions </span>‏ : ‎ 8.1 x 7.1 x 3.9 cm; 30 g</li>
+                    <li class="my-2"><span class="fw-bold m-2">Date First Available </span> ‏ : ‎ 3 April 2024 </li>
+                    <li class="my-2"><span class="fw-bold m-2">Manufacturer </span> ‏ : ‎ Flaring jewellers</li>
+                    <li class="my-2"><span class="fw-bold m-2">ASIN ‏  </span>: ‎ B0CZRLCT4C</li>
+                    <li class="my-2"><span class="fw-bold m-2">Item model number ‏ </span> : ‎ Jhumka earring</li>
+                    <li class="my-2"><span class="fw-bold m-2">Country of Origin </span>‏ : ‎ India
+                    </li>
+                    <li class="my-2"><span class="fw-bold m-2">Department  </span>‏ : ‎ womens</li>
+                    <li class="my-2"><span class="fw-bold m-2">Manufacturer</span> ‏ : ‎ Flaring jewellers, Flaring jewellers</li>
+                    <li class="my-2"><span class="fw-bold m-2">Item Weight</span>‏ : ‎ 30 g </li>
+                    <li class="my-2"><span class="fw-bold m-2">Net Quantity </span>‏ : ‎ 1.00 pair </li>
+        
+                </ul>
+       
+    </div>
+
+</div>
+
+<!-- ***** Footer Start ***** -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="first-item">
+                    <div class="logo">
+                        <!-- <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo"> -->
+                        <!-- <img src="assets/images/white-logo.png" alt="Welcome to Unica4U">   -->
+                    <!-- <img src="assets/images/logo.jpeg" alt="Unica4U Logo" style="height: 90px;">  -->
+                    <img src="assets/images/LOGO.jpeg" alt="Unica4U Logo" style="height: 90px;">
+                     
+                    </div>
+                    <ul>
+                        
+                        <li><a href="#">Address: Modi innovation Chh.Sambhajinagar</a></li>
+                        <li><a href="#">info@modiinnovations.com</a><li>
+                        <li><a href="#">+91 240247 8855</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <h4>Shopping &amp; Categories</h4>
+                <ul>
+                    <!-- <li><a href="#">Men’s Shopping</a></li>
+                    <li><a href="#">Women’s Shopping</a></li>
+                    <li><a href="#">Kid's Shopping</a></li> -->
+                    <li><a href="#">Famous Products</a></li>
+                    <li><a href="#">Our Products</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h4>Help &amp; Information</h4>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Tracking ID</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-12">
+                <div class="under-footer">
+                    <p>Copyright © 2024 Unica4U All Rights Reserved</p> 
+                        
+                    
+                    <!-- <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">Shreya Deshmane</a></p> -->
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    
+</body>
+
+<script>
+
+    var MainImg = document.getElementById('MainImg');
+    // var smallimg = document.getElementById('small-img');
+
+    // function view_deatils()
+    // {
+    //     alert('hello');
+    // }
+    function product_details(imgSrc, price) {
+        document.getElementById('MainImg').src = imgSrc;
+        
+        document.querySelector('#Main-price').innerText = price;
+        
+        document.getElementById('MainImg').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    //main image hover effect
+    function showImg(img)
+    {
+        MainImg.src=img;
+    }
+    function defaultImg()
+    {
+        MainImg.src='https://kotart.in/cdn/shop/files/CanvasAS71243.jpg?v=1721719493';
+    }
+
+    
+</script>
+
+</html>

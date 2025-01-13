@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+ 
+
+    <link rel="stylesheet" href="../../css/templatemo-hexashop.css">
+
+    <!-- <link rel="stylesheet" href="assets/css/owl-carousel.css"> -->
+    <link rel="stylesheet" href="../../css/owl-carousel.css">
+
+    <!-- <link rel="stylesheet" href="assets/css/lightbox.css"> -->
+    <link rel="stylesheet" href="../../css/lightbox.css">
+>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        .small-img-group{
+
+            display: flex;
+            justify-content: space-between;
+        }
+        
+
+        .small-img-col{
+
+            flex-basis: 20%;
+            cursor: pointer;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        .sproduct input{
+
+            width: 50px;
+            height: 40px;
+            padding-left: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        
+
+        .sproduct input:focus{
+
+            outline: none;
+        }
+
+        .buy-btn{ 
+            /* background: rgb(170, 101, 75); */
+            opacity: 1;
+            transition: 0.3s all;
+        }
+
+        #pro img{
+
+            height: 400px;
+            width: 100px;
+        }
+
+
+
+        .category-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            overflow: hidden;
+        }
+        /* .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        } */
+        .category-image {
+            height: 170px;
+            width: 150px;
+            object-fit: cover;
+        }
+        .category-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .category-description {
+            color: #6c757d;
+        }
+  
+
+    .card-body {
+        min-height: 150px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card-body a{
+        height: 40px;
+        width: 150px;
+       
+
+    } 
+    .card{
+        width: 200px;
+    }
+    .fix-img {
+        background-image: url('https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713');
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+         background-attachment: fixed;
+        height: 100vh;
+        width: 100%;
+    }
+
+  /* cart styling */
+
+    .cart{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 200;
+        overflow: auto;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    
+        transition: 1s;
+        height: 100vh;
+    }
+    
+    </style>
+
+
+</head>
+<body>
+ 
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area fixed-top" style="position: fixed; z-index: 100;">
+        <div class="container-fluid bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 d-flex justify-content-around">
+                        <p class="text-white">abc2024@gmail.com</p>
+                        <p class="text-white">+91 843238493</p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 d-flex justify-content-end">
+                        <a class="text-white mx-3" href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="text-white mx-3" href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a class="text-white mx-3" href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a class="text-white mx-3" href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container-fluid bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a href="index.html" class="navbar-brand">
+                                <img src="../../images/LOGO.jpeg" alt="Unica4U Logo" style="height: 90px;">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active " href="../../../index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="#men">Products</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link  " href="#women">Carts & Wishlist</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link  " href="#kids">Orders</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle " href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Pages
+                                        </a>
+                                       
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle " href="#" id="featuresDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Features
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="featuresDropdown">
+                                            <li><a class="dropdown-item" href="#">Features Page 1</a></li>
+                                            <li><a class="dropdown-item" href="#">Features Page 2</a></li>
+                                            <li><a class="dropdown-item" href="#">Features Page 3</a></li>
+                                            <li><a class="dropdown-item" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="#explore">Explore</a>
+                                    </li>
+                                    <li class="nav-item pt-2" onclick="cart()">
+                                        <span class="text-secondary">Cart</span> <i class="fa-solid fa-cart-shopping"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    <section class="container sproduct mt-5 pt-5">
+    <div class="row mt-5">
+        <div class="col-lg-1 col-md-2 col-2 text-center">
+            <ul type="none" class="">
+                <li>
+                    <img src="../../images/sm-img/art/madhubani/product1.png" alt="" class="h-75 w-75 border border-dark my-2" onmouseover="showImg('../../images/sm-img/art/madhubani/product1.png')" 
+                        onmouseout="defaultImg()" >
+                </li>
+                    <img src="../../images/sm-img/art/madhubani/product2.jpg" alt="" class="h-75 w-75 border border-dark my-2" onmouseover="showImg('../../images/sm-img/art/madhubani/product2.jpg')" 
+                        onmouseout="defaultImg()" >
+                </li>
+                <li>
+                    <img src="../../images/sm-img/art/madhubani/product3.jpg" alt="" class="h-75 w-75 border border-dark my-2" onmouseover="showImg('../../images/sm-img/art/madhubani/product3.jpg')" 
+                    onmouseout="defaultImg()">
+                </li>
+                <li>
+                    <img src="../../images/sm-img/art/madhubani/product4.jpg" alt="" class="h-75 w-75 border border-dark my-2" onmouseover="showImg('../../images/sm-img/art/madhubani/product4.jpg')" 
+                    onmouseout="defaultImg()">
+                </li>
+                <!-- <li>
+                    <img src="../../images/sm-img/product5.jpg" alt="" class="h-75 w-75 border border-dark my-2" onmouseover="showImg('../../images/sm-img/art/madhubani/product1.png')" 
+                    onmouseout="defaultImg()">
+                </li> -->
+                <!-- <li>
+                    <img src="./assets/images/sm-img/video.png" alt="" class="h-100 w-100 border border-dark my-2" onmouseover="showImg('./assets/images/sm-img/video.png')" 
+                    onmouseout="defaultImg()">
+                </li> -->
+            </ul>
+        </div>
+        <div class="col-lg-5 col-md-6 col-10 " id="pro">
+
+            <img  class="img-fluid w-100 h-75 fix-img" src="https://thebimba.com/cdn/shop/products/1179-madhubani-painting-artwork.jpg?v=1654054700"  id="MainImg">
+             
+        </div>
+
+        <div class="col-lg-5 col-md-12 col-12 px-4  overflow-scroll " style="height: 80vh;scrollbar-width: none;">
+
+            <h6>Home / Jhumka</h6>
+            <h3 id="Main-title">Madhubani Art</h3>
+            <h2 id="Main-price">₹500.00 INR</h2>
+
+            <input type="number" value="1" min="1">
+            <!-- <button class="buy-btn btn btn-primary" onclick="hello('https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713', 'Bareli ka Jhumka','₹275.00 INR')">Add To Cart</button> -->
+            <button class="buy-btn btn btn-primary" onclick="hello()">Add To Cart</button>
+            <button class="buy-btn btn btn-dark">Buy Now</button>
+
+            <h4 class="mt-5 mb-4">Product Details</h4>
+            <div class="row d-flex">
+                 <div class="col-2 col-md-6 border-bottom border-bottom-dark  ">
+                    <ul type="none" >
+                        <li class="my-2">
+                            <span class="fw-bold">Material type
+                            </span>
+                            <!-- <span class="mx-5">Metal</span> -->
+                        </li>
+                        <li class="my-2">
+                            <span class="fw-bold">Metal type
+                            </span>
+                            <!-- <span class="mx-5">Alloy</span> -->
+                        </li>
+                        <li class="my-2">
+                            <span class="fw-bold ">Occasion type</span>
+                            <!-- <span class="mx-5">Communion</span> -->
+                        </li>
+                        <li class="my-2">
+                            <span class="fw-bold ">Gem type
+                            </span>
+                            <!-- <span class="mx-5">Ruby</span> -->
+                        </li>
+                        <li class="my-2">
+                            <span class="fw-bold ">Item type name
+                            </span>
+                            <!-- <span class="mx-5">Earrings</span> -->
+                        </li>
+                        <li class="my-2">
+                            <span class="fw-bold ">Country of Origin
+                            </span>
+                            <!-- <span class="mx-5">India -->
+                            </span>
+                        </li>
+                    </ul>
+                    </div>
+                <div class="col-2 col-md-6 border-bottom border-bottom-dark ">
+                <ul type="none" >
+                <li class="my-2">
+                    <!-- <span class="fw-bold">Material type
+                    </span> -->
+                    <span class="">Wood</span>
+                </li>
+                <li class="my-2">
+                    <!-- <span class="fw-bold">Metal type
+                    </span> -->
+                    <span class="">Alloy</span>
+                </li>
+                <li class="my-2">
+                    <!-- <span class="fw-bold ">Occasion type</span> -->
+                    <span class="">Communion</span>
+                </li>
+                <li class="my-2">
+                    <!-- <span class="fw-bold ">Gem type
+                    </span> -->
+                    <span class="">Ruby</span>
+                </li>
+                <li class="my-2">
+                    <!-- <span class="fw-bold ">Item type name
+                    </span> -->
+                    <span class="">Art</span>
+                </li>
+                <li class="my-2">
+                    <!-- <span class="fw-bold ">Country of Origin
+                    </span> -->
+                    <span class="">India
+                    </span>
+                </li>
+            </ul>
+            </div>
+          
+            </div>
+            <div class="border-bottom border-bottom-dark">
+                <h4 class="mt-5">About this item</h4>
+                <ul style="list-style: disc;" class="text-secondary">
+                    <li class="text-secondary">
+                        <p class="fs-6 m-2 text-secondary">Vibrant Design: Handcrafted cushion cover featuring an intricate, colourful mandala pattern in earthy tones of red, orange, green, and blue.</p>
+                    </li >
+                    <li class="text-secondary">
+                       <p class="fs-6 m-2 text-secondary">Ethnic Motifs: Adorned with traditional Indian motifs like floral patterns, paisley designs, and geometric borders.</p>
+                    </li>
+                    <li class="text-secondary">
+                        <p class="fs-6 m-2 text-secondary">Soft Fabric: Crafted from premium cotton fabric, offering a soft and comfortable texture.</p>
+                     </li>
+                    <li class="text-secondary">
+                        <p class="fs-6 m-2 text-secondary">Dimensions: Measures approximately 40 cm x 40 cm, suitable for standard-sized cushions or pillows.</p>
+                     </li>
+                    <li class="text-secondary">
+                        <p class="fs-6 m-2 text-secondary">Versatile Accent: Adds a vibrant, ethnic touch to your living spaces, bedrooms, or outdoor seating areas</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <h4 class="mt-5 mb-4">Additional Informations</h4>
+            <div class="row d-flex">
+                <div class="col-2 col-md-6 border-bottom border-bottom-dark  ">
+                   <ul type="none" >
+                       <li class="my-2">
+                           <span class="fw-bold">Pattern	
+                           </span>
+                           <!-- <span class="mx-5">Metal</span> -->
+                       </li>
+                       <li class="my-2">
+                           <span class="fw-bold">Colour
+                           </span>
+                           <!-- <span class="mx-5">Alloy</span> -->
+                       </li>
+                       <li class="my-2">
+                           <span class="fw-bold ">Product Dimensions	</span>
+                           <!-- <span class="mx-5">Communion</span> -->
+                       </li>
+                       <li class="my-2">
+                           <span class="fw-bold ">Style	
+                           </span>
+                           <!-- <span class="mx-5">Ruby</span> -->
+                       </li>
+                       <li class="my-2">
+                           <span class="fw-bold ">Generic Name
+                           </span>
+                           <!-- <span class="mx-5">Earrings</span> -->
+                       </li>
+                    
+                   </ul>
+                   </div>
+               <div class="col-2 col-md-6 border-bottom border-bottom-dark ">
+               <ul type="none" >
+               <li class="my-2">
+                   <!-- <span class="fw-bold">Material type
+                   </span> -->
+                   <span class="">Madhubani Art Fish And Lotus
+                </span>
+               </li>
+               <li class="my-2">
+                   <!-- <span class="fw-bold">Metal type
+                   </span> -->
+                   <span class="">Yellow
+
+
+                </span>
+               </li>
+               <li class="my-2">
+                   <!-- <span class="fw-bold ">Occasion type</span> -->
+                   <span class="">41L x 41W Centimeters
+
+                </span>
+               </li>
+               <li class="my-2">
+                   <!-- <span class="fw-bold ">Gem type
+                   </span> -->
+                   <span class="">Traditional Indian
+
+                </span>
+               </li>
+               
+            
+           </ul>
+           </div>
+         
+           </div>
+
+
+            <!-- <span>Earrings are the ultimate style accessory. Every woman will fall in love with these in-season earrings. In an endeavour to delightfully surprise its customers, travels around the country to procure exquisite and rare pieces of ornamentation. World-class Craftsmanship.</span> -->
+        </div>
+
+
+        <!-- cart -->
+        <div style="width: 350px;" class="cart border p-3">
+            <div class="d-flex justify-content-around ">
+                <div class="">
+                    <div class="cart-title fs-4 p-3">Your Cart</div>
+                </div>
+            <div class="ml-3">
+                <!-- <button class="btn btn-danger btn-sm " onclick="cart()">Cancel</button> -->
+                <i class="fa-solid fa-xmark fs-3" onclick="cart()"></i>
+            </div>
+            </div>
+            <div class="cart-section d-flex">
+            <div class="cart-contenet d-flex ">
+                <div class="cart-box w-25">
+                    <!-- <img class="w-100 h-75 cart-img" src="https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713" alt=""> -->
+                    <img class="w-100 h-75 cart-img" src="" alt="">
+                </div>
+                <div class="cart-detail mx-3">
+                    <!-- <div class="cart-product-title cart-name  text-center ">Bareli Ka Jhumka</div> -->
+                    <p class="cart-product-title cart-name text-center"></p>
+                    <!-- <span class="cart-product-price cart-price mx-2">₹275.00 INR</span> -->
+                    <p class="cart-product-price cart-price mx-2"></p>
+                </div>
+                <div class="cart-quantity ">
+                    <button class="decrement btn btn-sm btn-dark">-</button>
+                    <span>1</span>
+                    <button class="increment btn btn-sm btn-dark">+</button>
+                </div>
+            </div>
+            </div>
+
+                <!-- <div class="total">
+                    <div class="total-title">total</div>
+                    <div class="total-price">price</div>
+                </div>
+                <button class="btn btn-danger" id="btn-close">close</button> -->
+        </div>
+    </div>
+
+    </section>
+
+    <!-- product history -->
+    <article class="container">
+        <p class="display-6 my-3">Madhubani Art</p>
+
+        <div style="text-align: justify;">
+
+        <p class=" text-secondary fs-6">Madhubani art (also known as Mithila art) is a style of painting practiced in the Mithila region of India and Nepal. It is named after the Madhubani district of Bihar, India, which is where it originated.[1] Jitwarpur, Ranti and Rasidpur are the three most notable cities associated with the tradition and evolution of Madhubani art.[1] The art was traditionally practiced by female members.[2] Artists create these paintings using a variety of mediums, including their own fingers, or twigs, brushes, nib-pens, and matchsticks.</p>
+        <p class="text-secondary fs-6">The paint is created using natural dyes and pigments such as ochre and lampblack are used for reddish brown and black respectively.[3] The paintings are characterized by their eye-catching geometrical patterns. There is ritual content for particular occasions, such as birth or marriage,[2] and festivals, such as Holi, Surya Shasti, Kali Puja, Upanayana, and Durga Puja.</p>
+         </div>
+
+    </article>
+
+   
+
+    <!-- sub-items -->
+    <div class="container my-5 py-5">
+        <p class="display-6 my-5 text-center ">Similar Products</p>
+
+       <div class="d-flex flex-wrap justify-content-center gap-2">
+        <!-- Category 1 -->
+         <div class="card">
+        <div class="custom-column">
+            <div class="custom-card  p-3 text-center">
+                <img src="https://thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_180x.jpg?v=1654053832%20180w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_360x.jpg?v=1654053832%20360w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_540x.jpg?v=1654053832%20540w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_720x.jpg?v=1654053832%20720w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_900x.jpg?v=1654053832%20900w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1080x.jpg?v=1654053832%201080w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1296x.jpg?v=1654053832%201296w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1512x.jpg?v=1654053832%201512w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1728x.jpg?v=1654053832%201728w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1950x.jpg?v=1654053832%201950w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2100x.jpg?v=1654053832%202100w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2260x.jpg?v=1654053832%202260w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2450x.jpg?v=1654053832%202450w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2700x.jpg?v=1654053832%202700w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3000x.jpg?v=1654053832%203000w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3350x.jpg?v=1654053832%203350w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3750x.jpg?v=1654053832%203750w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_4100x.jpg?v=1654053832%204100w" alt="Product 1" class="card-img-top category-image" id="small-img">
+                <h5 class="">Category 1</h5>
+                <p class="card-text text-truncate">Details about this category.Details about this categoryDetails about this categoryDetails about this category
+                    Details about this categoryDetails about this categoryDetails about this categoryDetails about this categoryDetails about this category
+                </p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_180x.jpg?v=1654053832%20180w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_360x.jpg?v=1654053832%20360w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_540x.jpg?v=1654053832%20540w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_720x.jpg?v=1654053832%20720w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_900x.jpg?v=1654053832%20900w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1080x.jpg?v=1654053832%201080w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1296x.jpg?v=1654053832%201296w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1512x.jpg?v=1654053832%201512w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1728x.jpg?v=1654053832%201728w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1950x.jpg?v=1654053832%201950w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2100x.jpg?v=1654053832%202100w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2260x.jpg?v=1654053832%202260w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2450x.jpg?v=1654053832%202450w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2700x.jpg?v=1654053832%202700w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3000x.jpg?v=1654053832%203000w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3350x.jpg?v=1654053832%203350w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3750x.jpg?v=1654053832%203750w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_4100x.jpg?v=1654053832%204100w','₹500.00 INR')">View Details</button>
+            </div>
+        </div>
+        </div>
+        <!-- Category 2 -->
+         <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://thebimba.com/cdn/shop/products/1947-laxmi-painting-artwork-black.jpg?v=1654050488" alt="" class="card-img-top category-image">
+                <h5 class="">Category 2</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/1947-laxmi-painting-artwork-black.jpg?v=1654050488','₹780.00 INR')">View Details</button>
+            
+            </div>
+        </div>
+        </div>
+        <!-- Category 3 -->
+         <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+
+                <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-683.png?v=1654054749" alt="" class="card-img-top category-image">
+                <h5>Category 3</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-683.png?v=1654054749','₹500.00 INR')">View Details</button>
+
+            </div>
+        </div>
+         </div>
+        <!-- Category 4 -->
+         <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2033.png?v=1654051169" alt="" class="card-img-top category-image">
+                <h5>Category 4</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2033.png?v=1654051169','₹200.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        <!-- Category 5 -->
+         <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-678.png?v=1654054803" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-678.png?v=1654054803','₹300.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+         <!-- Category 6-->
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2039.png?v=1654051125 alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2039.png?v=1654051125','₹350.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+         <!-- Category 7-->
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+            <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2040.png?v=1654051116" alt=""  class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2040.png?v=1654051116','₹450.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        <!-- Category 8-->
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2027.png?v=1654051220" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2027.png?v=1654051220','₹250.00 INR')">View Details</button>
+
+            </div>
+        </div>
+         </div>
+         <!-- Category 9-->
+         <div class="card">
+        <div class="custom-column pt-4 pb-3 pl-2 pr-2 text-center">
+            <div class="custom-card">
+                <img src="https://www.culturalindia.net/iliimages/Madhubani%20painting%202_1.jpg" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://www.culturalindia.net/iliimages/Madhubani%20painting%202_1.jpg','₹450.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://www.culturalindia.net/iliimages/Madhubani%20painting%205.jpg" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://www.culturalindia.net/iliimages/Madhubani%20painting%205.jpg','₹470.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2041.png?v=1654051108" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/375539068/wuuin_400.webp','₹550.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2039.png?v=1654051125" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2039.png?v=1654051125','₹250.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-683.png?v=1654054749" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-683.png?v=1654054749','₹450.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+
+
+      <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork.jpg?v=1654053832" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork.jpg?v=1654053832','₹400.00 INR')">View Details</button>
+
+            </div>
+        </div>
+        </div>
+
+
+        <div class="card">
+        <div class="custom-column">
+            <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
+                <img src="https://thebimba.com/cdn/shop/products/2027-madhubani-painting-artwork.jpg?v=1654051220" alt="" class="card-img-top category-image">
+                <h5>Category 5</h5>
+                <p>Details about this category.</p>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/2027-madhubani-painting-artwork.jpg?v=1654051220','₹650.00 INR')">View Details</button>
+            </div>
+        </div>
+        </div>  
+            </div>
+        <div class="d-flex justify-content-center my-3">
+            <img src="https://www.culturalindia.net/iliimages/Madhubani%20painting%205.jpg" alt="" class="img-fluid w-75 mx-5">
+        </div>
+
+        <div  style="display:grid; justify-content:center;">
+            <h3 class="mx-5 mt-5 mb-4">Product Details</h3>
+                <ul>
+                    <li class="my-2"><span class="fw-bold m-2">Package Dimensions </span>‏ : ‎ 8.1 x 7.1 x 3.9 cm; 30 g</li>
+                    <li class="my-2"><span class="fw-bold m-2">Date First Available </span> ‏ : ‎ 3 April 2024 </li>
+                    <li class="my-2"><span class="fw-bold m-2">Manufacturer </span> ‏ : ‎ Flaring jewellers</li>
+                    <li class="my-2"><span class="fw-bold m-2">ASIN ‏  </span>: ‎ B0CZRLCT4C</li>
+                    <li class="my-2"><span class="fw-bold m-2">Item model number ‏ </span> : ‎ Jhumka earring</li>
+                    <li class="my-2"><span class="fw-bold m-2">Country of Origin </span>‏ : ‎ India
+                    </li>
+                    <li class="my-2"><span class="fw-bold m-2">Department  </span>‏ : ‎ womens</li>
+                    <li class="my-2"><span class="fw-bold m-2">Manufacturer</span> ‏ : ‎ Flaring jewellers, Flaring jewellers</li>
+                    <li class="my-2"><span class="fw-bold m-2">Item Weight</span>‏ : ‎ 30 g </li>
+                    <li class="my-2"><span class="fw-bold m-2">Net Quantity </span>‏ : ‎ 1.00 pair </li>
+        
+                </ul>
+       
+    </div>
+
+   </div>
+
+
+<!-- ***** Footer Start ***** -->
+<footer class="bg-dark">
+    <div class="container py-4">
+        <div class="row">
+            <!-- Logo and Contact Info -->
+            <div class="col-lg-3 mb-4">
+                <div class="first-item">
+                    <div class="logo mb-3">
+                        <img src="../../../assets/images/LOGO.jpeg" alt="Unica4U Logo" style="height: 90px;">
+                    </div>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Address: Modi Innovation, Chh. Sambhajinagar</a></li>
+                        <li><a href="mailto:info@modiinnovations.com">info@modiinnovations.com</a></li>
+                        <li><a href="tel:+912402478855">+91 240 247 8855</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Shopping & Categories -->
+            <div class="col-lg-3 mb-4">
+                <h4>Shopping &amp; Categories</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#">Famous Products</a></li>
+                    <li><a href="#">Our Products</a></li>
+                </ul>
+            </div>
+            <!-- Useful Links -->
+            <div class="col-lg-3 mb-4">
+                <h4>Useful Links</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Help & Information -->
+            <div class="col-lg-3 mb-4">
+                <h4>Help &amp; Information</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Tracking ID</a></li>
+                </ul>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="col-lg-12">
+                <div class="under-footer text-center mt-3">
+                    <p class="mb-2">Copyright © 2024 Unica4U. All Rights Reserved</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-behance"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    
+</body>
+  <!-- <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script> -->
+
+<script>
+
+    var MainImg = document.getElementById('MainImg');
+    var product=document.querySelector(".cart-contenet");
+    // const addCart=document.querySelectorAll(".addCart");
+    // var smallimg = document.getElementById('small-img');
+
+    // function view_deatils()
+    // {
+    //     alert('hello');
+    // }
+    function product_details(imgSrc, price) {
+        document.getElementById('MainImg').src = imgSrc;
+        
+        document.querySelector('#Main-price').innerText = price;
+        
+        document.getElementById('MainImg').scrollIntoView({ behavior: 'smooth' });
+        // console.log(MainImg);
+
+    }
+
+    //main image hover effect
+    function showImg(img)
+    {
+        MainImg.src=img;
+    }
+    function defaultImg()
+    {
+        MainImg.src='https://thebimba.com/cdn/shop/products/1179-madhubani-painting-artwork.jpg?v=1654054700';
+    }
+    function cart()
+    {
+        const cart= document.querySelector(".cart");
+        if (cart.style.display === 'none') {
+                cart.style.display = 'block';
+            } else {
+                cart.style.display = 'none';
+            }
+    }
+    
+    // add product to cart
+    // addCart.addEventListner("click",(src,title,price)=>{
+        // function addCart(img,title,price)
+        // {
+        // document.querySelector(".cart-img").src=img;
+        // document.querySelector(".cart-title").innerText=title;
+        // document.querySelector(".cart-price").innerText=price;
+        // }
+    // })
+    // function hello(img,title,price)
+    // {
+    //     document.querySelector(".cart-img").src=img;
+    //     document.querySelector(".cart-name").innerText=title;
+    //     document.querySelector(".cart-price").innerText=price;
+    // }
+    function hello()
+    {
+        const img=MainImg.src;
+        const title=document.querySelector("#Main-title").textContent;
+        const price=document.querySelector("#Main-price").textContent;
+        // alert(img);
+        // const div=document.createElement('div');
+        // const p1=document.createElement('p');
+        // const p2=document.createElement('p');
+        const cimg=document.querySelector(".cart-img").src=img;
+         const ctitle=document.querySelector(".cart-name").textContent=title;
+         const cprice=document.querySelector(".cart-price").textContent=price; 
+         
+        // const first=div.appendChild(cimg);
+        //   const first=p1.textContent=title;
+        //   const second=p2.textContent=price;
+        //   div.appendChild(first);
+        //   div.appendChild(second);
+        //   product.appendChild(div);
+
+    }
+</script>
+
+</html>
