@@ -25,7 +25,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-
+        body{
+            background-color: #EDE7DD;
+        }
         .small-img-group{
 
             display: flex;
@@ -140,7 +142,7 @@
 <body>
  
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area fixed-top" style="position: fixed; z-index: 100;">
+    <header class="header-area fixed-top" style=" background-color: #EDE7DD; position: fixed; z-index: 100;">
         <div class="container-fluid bg-dark">
             <div class="container">
                 <div class="row">
@@ -158,13 +160,13 @@
             </div>
         </div>
     
-        <div class="container-fluid bg-white">
+        <div class="container-fluid " style="background-color: #EDE7DD;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
                             <a href="index.html" class="navbar-brand">
-                                <img src="../../images/LOGO.jpeg" alt="Unica4U Logo" style="height: 90px;">
+                                <img src="../../images/Logo.png" alt="Unica4U Logo" style="height: 90px;">
                             </a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -172,25 +174,25 @@
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav ms-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link active fw-bold" href="../../../index.html">Home</a>
+                                        <a class="nav-link active " href="../../../index.html">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link fw-bold" href="#men">Products</a>
+                                        <a class="nav-link " href="#men">Products</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link fw-bold " href="#women">Carts & Wishlist</a>
+                                        <a class="nav-link  " href="#women">Carts & Wishlist</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link fw-bold " href="#kids">Orders</a>
+                                        <a class="nav-link  " href="#kids">Orders</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle " href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Pages
                                         </a>
                                        
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="featuresDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle " href="#" id="featuresDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Features
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="featuresDropdown">
@@ -201,10 +203,10 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link fw-bold" href="#explore">Explore</a>
+                                        <a class="nav-link " href="#explore">Explore</a>
                                     </li>
                                     <li class="nav-item pt-2" onclick="cart()">
-                                        <span class="text-secondary">Cart</span> <i class="fa-solid fa-cart-shopping"></i>
+                                        <span class="text-secondary mx-2">Cart</span> <i class="fa-solid fa-cart-shopping"></i>
                                     </li>
                                 </ul>
                             </div>
@@ -253,10 +255,10 @@
         </div>
 
         <div class="col-lg-5 col-md-12 col-12 px-4  overflow-scroll " style="height: 80vh;scrollbar-width: none;">
-
+  
             <h6>Home / Jhumka</h6>
             <h3 id="Main-title">Bareli ka Jhumka</h3>
-            <h2 id="Main-price">₹275.00 INR</h2>
+            <h2 id="Main-price">₹<span id="product-price">275.00</span>INR </h2>
 
             <input type="number" value="1" min="1">
             <!-- <button class="buy-btn btn btn-primary" onclick="hello('https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713', 'Bareli ka Jhumka','₹275.00 INR')">Add To Cart</button> -->
@@ -265,7 +267,7 @@
 
             <h4 class="mt-5 mb-4">Product Details</h4>
             <div class="row d-flex">
-                 <div class="col-2 col-md-6 border-bottom border-bottom-dark  ">
+                 <div class="col-6 col-md-6 col-sm-6 border-bottom border-bottom-dark  ">
                     <ul type="none" >
                         <li class="my-2">
                             <span class="fw-bold">Material type
@@ -299,7 +301,7 @@
                         </li>
                     </ul>
                     </div>
-                <div class="col-2 col-md-6 border-bottom border-bottom-dark ">
+                <div class="col-6 col-md-6 col-sm-6 border-bottom border-bottom-dark ">
                 <ul type="none" >
                 <li class="my-2">
                     <!-- <span class="fw-bold">Material type
@@ -358,7 +360,7 @@
             
             <h4 class="mt-5 mb-4">Additional Informations</h4>
             <div class="row d-flex">
-                <div class="col-2 col-md-6 border-bottom border-bottom-dark  ">
+                <div class="col-6 col-md-6 col-sm-6 border-bottom border-bottom-dark  ">
                    <ul type="none" >
                        <li class="my-2">
                            <span class="fw-bold">Manufacturer
@@ -387,7 +389,7 @@
                     
                    </ul>
                    </div>
-               <div class="col-2 col-md-6 border-bottom border-bottom-dark ">
+               <div class="col-6 col-md-6 col-sm-6 border-bottom border-bottom-dark ">
                <ul type="none" >
                <li class="my-2">
                    <!-- <span class="fw-bold">Material type
@@ -424,7 +426,7 @@
 
 
         <!-- cart -->
-        <div style="width: 350px;" class="cart border p-3">
+        <div style="width: 380px; scrollbar-width: none; background-color: #EDE7DD;" class="cart border p-3">
             <div class="d-flex justify-content-around ">
                 <div class="">
                     <div class="cart-title fs-4 p-3">Your Cart</div>
@@ -434,31 +436,38 @@
                 <i class="fa-solid fa-xmark fs-3" onclick="cart()"></i>
             </div>
             </div>
-            <div class="cart-section d-flex">
-            <div class="cart-contenet d-flex ">
-                <div class="cart-box w-25">
+            <div class="cart-section overflow-scroll h-75 " style="scrollbar-width: none;">
+            <!-- <div class="cart-contenet d-flex "> -->
+                <!-- <div class="cart-box w-25"> -->
                     <!-- <img class="w-100 h-75 cart-img" src="https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713" alt=""> -->
-                    <img class="w-100 h-75 cart-img" src="" alt="">
-                </div>
-                <div class="cart-detail mx-3">
-                    <!-- <div class="cart-product-title cart-name  text-center ">Bareli Ka Jhumka</div> -->
+                    <!-- <img class="w-100 h-75 cart-img" src="" alt=""> -->
+                <!-- </div> -->
+                <!-- <div class="cart-detail mx-3">
+                    <div class="cart-product-title cart-name  text-center ">Bareli Ka Jhumka</div>
                     <p class="cart-product-title cart-name text-center"></p>
-                    <!-- <span class="cart-product-price cart-price mx-2">₹275.00 INR</span> -->
+                    <span class="cart-product-price cart-price mx-2">₹275.00 INR</span>
                     <p class="cart-product-price cart-price mx-2"></p>
-                </div>
-                <div class="cart-quantity ">
-                    <button class="decrement btn btn-sm btn-dark">-</button>
+                </div> -->
+                <!-- <div class="cart-quantity "> -->
+                    <!-- <button class="decrement btn btn-sm btn-dark">-</button>
                     <span>1</span>
                     <button class="increment btn btn-sm btn-dark">+</button>
-                </div>
+                </div> -->
             </div>
+            <div class="total-section border border text-center">
+                <div class="total "> 
+                    <div class="total-title fs-4 ">Total:<span class="total-price">0.00</span> Rs</div>
+                </div>
+                    <div class="btn-group w-100">
+                        <button class="btn btn-dark" id="btn-close" >Buy Now</button> 
+                        <button class="btn btn-danger" id="btn-close" onclick="cart()">Close</button> 
+                    </div>
+                
+            </div>
+            
             </div>
 
-                <!-- <div class="total">
-                    <div class="total-title">total</div>
-                    <div class="total-price">price</div>
-                </div>
-                <button class="btn btn-danger" id="btn-close">close</button> -->
+                
         </div>
     </div>
 
@@ -496,7 +505,7 @@
                 <p class="card-text text-truncate">Details about this category.Details about this categoryDetails about this categoryDetails about this category
                     Details about this categoryDetails about this categoryDetails about this categoryDetails about this categoryDetails about this category
                 </p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/612/612/l51d30w0/earring/s/o/j/na-black-jhumka-qizmi-original-imagcsu8qrjemned.jpeg?q=70','₹500.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/612/612/l51d30w0/earring/s/o/j/na-black-jhumka-qizmi-original-imagcsu8qrjemned.jpeg?q=70','500.00')">View Details</button>
             </div>
         </div>
         </div>
@@ -507,7 +516,7 @@
                 <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/earring/t/t/9/na-rladsqkkj-katniss-original-imah3777hce5xzaf.jpeg?q=70" alt="" class="card-img-top category-image">
                 <h5>Category 2</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/612/612/xif0q/earring/t/t/9/na-rladsqkkj-katniss-original-imah3777hce5xzaf.jpeg?q=70','₹400.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/612/612/xif0q/earring/t/t/9/na-rladsqkkj-katniss-original-imah3777hce5xzaf.jpeg?q=70','400.00')">View Details</button>
             
             </div>
         </div>
@@ -520,7 +529,7 @@
                 <img src="https://images.meesho.com/images/products/177544708/mjios_400.webp" alt="" class="card-img-top category-image">
                 <h5>Category 3</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/177544708/mjios_400.webp','₹500.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/177544708/mjios_400.webp','500.00')">View Details</button>
 
             </div>
         </div>
@@ -532,7 +541,7 @@
                 <img src="https://tse3.mm.bing.net/th?id=OIP.C5-9WkuAj5iwpIeT4dWExQHaHa&pid=Api&P=0&h=220" alt="" class="card-img-top category-image">
                 <h5>Category 4</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://tse3.mm.bing.net/th?id=OIP.C5-9WkuAj5iwpIeT4dWExQHaHa&pid=Api&P=0&h=220','₹200.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://tse3.mm.bing.net/th?id=OIP.C5-9WkuAj5iwpIeT4dWExQHaHa&pid=Api&P=0&h=220','200.00')">View Details</button>
 
             </div>
         </div>
@@ -545,7 +554,7 @@
                 <img src="https://images.meesho.com/images/products/326870226/8rqcm_400.webp" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/326870226/8rqcm_400.webp','₹300.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/326870226/8rqcm_400.webp','300.00')">View Details</button>
 
             </div>
         </div>
@@ -557,7 +566,7 @@
                 <img src="https://images.meesho.com/images/products/326870226/8rqcm_400.webp" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/326870226/8rqcm_400.webp','₹350.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/326870226/8rqcm_400.webp','350.00')">View Details</button>
 
             </div>
         </div>
@@ -569,7 +578,7 @@
         <img src="https://images.meesho.com/images/products/395993664/b5vnp_400.webp" alt=""  class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/395993664/b5vnp_400.webp','₹450.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/395993664/b5vnp_400.webp','450.00')">View Details</button>
 
             </div>
         </div>
@@ -582,7 +591,7 @@
                 <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/earring/t/t/9/na-rladsqkkj-katniss-original-imah3777hce5xzaf.jpeg?q=70" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/612/612/xif0q/earring/t/t/9/na-rladsqkkj-katniss-original-imah3777hce5xzaf.jpeg?q=70','₹250.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/612/612/xif0q/earring/t/t/9/na-rladsqkkj-katniss-original-imah3777hce5xzaf.jpeg?q=70','250.00')">View Details</button>
 
             </div>
         </div>
@@ -594,7 +603,7 @@
                 <img src="https://tse3.mm.bing.net/th?id=OIP.KgUbJPw0NjPJgRfZ912rhAHaHa&pid=Api&P=0&h=220" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://tse3.mm.bing.net/th?id=OIP.KgUbJPw0NjPJgRfZ912rhAHaHa&pid=Api&P=0&h=220','₹450.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://tse3.mm.bing.net/th?id=OIP.KgUbJPw0NjPJgRfZ912rhAHaHa&pid=Api&P=0&h=220','450.00')">View Details</button>
 
             </div>
         </div>
@@ -606,7 +615,7 @@
                 <img src="https://rukminim2.flixcart.com/image/312/312/kxp0mfk0/shopsy-earring/u/8/j/02111-lezara-original-imag9jr4mwhehkj5.jpeg?q=70&crop=false" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/312/312/kxp0mfk0/shopsy-earring/u/8/j/02111-lezara-original-imag9jr4mwhehkj5.jpeg?q=70&crop=false','₹470.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://rukminim2.flixcart.com/image/312/312/kxp0mfk0/shopsy-earring/u/8/j/02111-lezara-original-imag9jr4mwhehkj5.jpeg?q=70&crop=false','470.00')">View Details</button>
 
             </div>
         </div>
@@ -619,7 +628,7 @@
                 <img src="https://images.meesho.com/images/products/375539068/wuuin_400.webp" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/375539068/wuuin_400.webp','₹550.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/375539068/wuuin_400.webp','550.00')">View Details</button>
 
             </div>
         </div>
@@ -631,7 +640,7 @@
                 <img src="https://images.meesho.com/images/products/401147093/xneaf_400.webp" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/401147093/xneaf_400.webp','₹250.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/401147093/xneaf_400.webp','250.00')">View Details</button>
 
             </div>
         </div>
@@ -643,7 +652,7 @@
                 <img src="https://images.meesho.com/images/products/452976609/d9lpb_400.webp" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/452976609/d9lpb_400.webp','₹450.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/452976609/d9lpb_400.webp','450.00')">View Details</button>
 
             </div>
         </div>
@@ -657,7 +666,7 @@
                 <img src="https://m.media-amazon.com/images/I/71q4vKyTrlL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://m.media-amazon.com/images/I/71q4vKyTrlL._AC_UL480_FMwebp_QL65_.jpg','₹400.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://m.media-amazon.com/images/I/71q4vKyTrlL._AC_UL480_FMwebp_QL65_.jpg','400.00 ')">View Details</button>
 
             </div>
         </div>
@@ -670,7 +679,7 @@
                 <img src="https://images.meesho.com/images/products/460467062/u3zky_400.webp" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/460467062/u3zky_400.webp','₹650.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/460467062/u3zky_400.webp','650.00 ')">View Details</button>
             </div>
         </div>
         </div>  
@@ -768,83 +777,137 @@
 </body>
   <!-- <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script> -->
-
+<script src="../../../script/addCart.js"/>
 <script>
 
-    var MainImg = document.getElementById('MainImg');
-    var product=document.querySelector(".cart-contenet");
-    // const addCart=document.querySelectorAll(".addCart");
-    // var smallimg = document.getElementById('small-img');
+    // var MainImg = document.getElementById('MainImg');
+    // var product=document.querySelector(".cart-section");
+    // // const addCart=document.querySelectorAll(".addCart");
+    // // var smallimg = document.getElementById('small-img');
 
-    // function view_deatils()
-    // {
-    //     alert('hello');
+    // // function view_deatils()
+    // // {
+    // //     alert('hello');
+    // // }
+    // function product_details(imgSrc, price) {
+    //     document.getElementById('MainImg').src = imgSrc;
+        
+    //     document.querySelector('#Main-price').innerText = price;
+        
+    //     document.getElementById('MainImg').scrollIntoView({ behavior: 'smooth' });
+    //     // console.log(MainImg);
+
     // }
-    function product_details(imgSrc, price) {
-        document.getElementById('MainImg').src = imgSrc;
-        
-        document.querySelector('#Main-price').innerText = price;
-        
-        document.getElementById('MainImg').scrollIntoView({ behavior: 'smooth' });
-        // console.log(MainImg);
 
-    }
-
-    //main image hover effect
-    function showImg(img)
-    {
-        MainImg.src=img;
-    }
-    function defaultImg()
-    {
-        MainImg.src='https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713';
-    }
-    function cart()
-    {
-        const cart= document.querySelector(".cart");
-        if (cart.style.display === 'none') {
-                cart.style.display = 'block';
-            } else {
-                cart.style.display = 'none';
-            }
-    }
+    // //main image hover effect
+    // function showImg(img)
+    // {
+    //     MainImg.src=img;
+    // }
+    // function defaultImg()
+    // {
+    //     MainImg.src='https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713';
+    // }
+    // function cart()
+    // {
+    //     const cart= document.querySelector(".cart");
+    //     if (cart.style.display === 'none') {
+    //             cart.style.display = 'block';
+    //         } else {
+    //             cart.style.display = 'none';
+    //         }
+    // }
     
-    // add product to cart
-    // addCart.addEventListner("click",(src,title,price)=>{
-        // function addCart(img,title,price)
-        // {
-        // document.querySelector(".cart-img").src=img;
-        // document.querySelector(".cart-title").innerText=title;
-        // document.querySelector(".cart-price").innerText=price;
-        // }
-    // })
-    // function hello(img,title,price)
+    // // add product to cart
+    // // addCart.addEventListner("click",(src,title,price)=>{
+    //     // function addCart(img,title,price)
+    //     // {
+    //     // document.querySelector(".cart-img").src=img;
+    //     // document.querySelector(".cart-title").innerText=title;
+    //     // document.querySelector(".cart-price").innerText=price;
+    //     // }
+    // // })
+    // // function hello(img,title,price)
+    // // {
+    // //     document.querySelector(".cart-img").src=img;
+    // //     document.querySelector(".cart-name").innerText=title;
+    // //     document.querySelector(".cart-price").innerText=price;
+    // // }
+    // function hello()
     // {
-    //     document.querySelector(".cart-img").src=img;
-    //     document.querySelector(".cart-name").innerText=title;
-    //     document.querySelector(".cart-price").innerText=price;
-    // }
-    function hello()
-    {
-        const img=MainImg.src;
-        const title=document.querySelector("#Main-title").textContent;
-        const price=document.querySelector("#Main-price").textContent;
-        // alert(img);
-        // const div=document.createElement('div');
-        // const p1=document.createElement('p');
-        // const p2=document.createElement('p');
-        const cimg=document.querySelector(".cart-img").src=img;
-         const ctitle=document.querySelector(".cart-name").textContent=title;
-         const cprice=document.querySelector(".cart-price").textContent=price; 
-         
-        // const first=div.appendChild(cimg);
-        //   const first=p1.textContent=title;
-        //   const second=p2.textContent=price;
-        //   div.appendChild(first);
-        //   div.appendChild(second);
-        //   product.appendChild(div);
+    //     const img=MainImg.src;
+    //     const title=document.querySelector("#Main-title").textContent;
+    //     const price=document.querySelector("#Main-price").textContent;
+    //     const div=document.createElement('div');
+    //     div.style.display="flex";
+    //     div.style.marginTop="8px";
+    //     // alert(img);
 
-    }
+    //     // image added
+    //     const div1=document.createElement('div');
+    //     const image=document.createElement('img');
+    //     image.setAttribute('width','80px');
+    //     image.setAttribute('heigth','20px');
+    //     image.setAttribute('src',img);
+    //     div1.appendChild(image);
+    //      div.appendChild(div1);
+
+
+    //     //title
+    //     const div2=document.createElement('div');
+    //     const p1=document.createElement('p');
+    //     const p2=document.createElement('p');
+    //     div2.style.marginLeft="5px";
+    //     p1.textContent=title;
+    //     p2.textContent=price;
+    //     div2.appendChild(p1);
+    //     div2.appendChild(p2);
+    //     div.appendChild(div2);
+    //     // product.appendChild(div);
+
+
+    //     //quantity
+    //     const div3=document.createElement('div');
+    //     div3.style.marginLeft="5px";
+    //     // div3.style.display='inline-block';
+    //     const innerDiv=document.createElement('div');
+    //     innerDiv.style.display='flex';
+
+    //     const incrementBtn=document.createElement('button');
+    //     incrementBtn.textContent='+';
+    //     incrementBtn.setAttribute("class","btn btn-sm btn-dark");
+    //     innerDiv.appendChild(incrementBtn);
+
+    //     //input
+    //     const ip=document.createElement('input');
+    //     ip.setAttribute('type','text');
+    //     ip.setAttribute('value','1');
+    //     ip.style.padding="0px"; 
+    //     ip.setAttribute('class','form-control text-center');
+    //     innerDiv.appendChild(ip);
+
+    //     const decrementBtn=document.createElement('button');
+    //     decrementBtn.textContent='-';
+    //     decrementBtn.setAttribute("class","btn btn-sm btn-dark");
+    //     innerDiv.appendChild(decrementBtn);
+
+    //     div3.appendChild(innerDiv);
+    //     div.appendChild(div3);
+    //     product.appendChild(div);
+
+
+    //     // const cimg=document.querySelector(".cart-img").src=img;
+    //     //  const ctitle=document.querySelector(".cart-name").textContent=title;
+    //     //  const cprice=document.querySelector(".cart-price").textContent=price; 
+         
+    //     // const first=div.appendChild(cimg);
+    //     //   const first=p1.textContent=title;
+    //     //   const second=p2.textContent=price;
+    //     //   div.appendChild(first);
+    //     //   div.appendChild(second);
+    //     //   product.appendChild(div);
+
+    // }
 </script>
 
 </html>

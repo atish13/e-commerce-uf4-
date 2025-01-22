@@ -137,10 +137,123 @@
 
 
 </head>
+<style>
+    body{
+        background-color: #EDE7DD;
+    }
+    .small-img-group{
+
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
+    .small-img-col{
+
+        flex-basis: 20%;
+        cursor: pointer;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .sproduct input{
+
+        width: 50px;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    
+
+    .sproduct input:focus{
+
+        outline: none;
+    }
+
+    .buy-btn{ 
+        /* background: rgb(170, 101, 75); */
+        opacity: 1;
+        transition: 0.3s all;
+    }
+
+    #pro img{
+
+        height: 400px;
+        width: 100px;
+    }
+
+
+
+    .category-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        overflow: hidden;
+    }
+    /* .category-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    } */
+    .category-image {
+        height: 170px;
+        width: 150px;
+        object-fit: cover;
+    }
+    .category-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .category-description {
+        color: #6c757d;
+    }
+
+
+.card-body {
+    min-height: 150px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-body a{
+    height: 40px;
+    width: 150px;
+   
+
+} 
+.card{
+    width: 200px;
+}
+.fix-img {
+    background-image: url('https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713');
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+/* cart styling */
+
+.cart{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 200;
+    overflow: auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    
+    transition: 1s;
+    height: 100vh;
+}
+
+</style>
+
 <body>
  
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area fixed-top" style="position: fixed; z-index: 100;">
+    <header class="header-area fixed-top" style="position: fixed; z-index: 100; background-color:#EDE7DD;">
         <div class="container-fluid bg-dark">
             <div class="container">
                 <div class="row">
@@ -158,13 +271,13 @@
             </div>
         </div>
     
-        <div class="container-fluid bg-white">
+        <div class="container-fluid" style="background-color: #EDE7DD;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
                             <a href="index.html" class="navbar-brand">
-                                <img src="../../images/LOGO.jpeg" alt="Unica4U Logo" style="height: 90px;">
+                                <img src="../../images/Logo.png" alt="Unica4U Logo" style="height: 90px;">
                             </a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -203,7 +316,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link " href="#explore">Explore</a>
                                     </li>
-                                    <li class="nav-item pt-2" onclick="cart()">
+                                    <li class="nav-item pt-2 mx-2" onclick="cart()">
                                         <span class="text-secondary">Cart</span> <i class="fa-solid fa-cart-shopping"></i>
                                     </li>
                                 </ul>
@@ -256,7 +369,9 @@
 
             <h6>Home / Jhumka</h6>
             <h3 id="Main-title">Madhubani Art</h3>
-            <h2 id="Main-price">₹500.00 INR</h2>
+            <!-- <h2 id="Main-price">₹500.00 INR</h2> -->
+            <h2 id="Main-price">₹<span id="product-price">550.00</span>INR </h2>
+
 
             <input type="number" value="1" min="1">
             <!-- <button class="buy-btn btn btn-primary" onclick="hello('https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713', 'Bareli ka Jhumka','₹275.00 INR')">Add To Cart</button> -->
@@ -265,7 +380,7 @@
 
             <h4 class="mt-5 mb-4">Product Details</h4>
             <div class="row d-flex">
-                 <div class="col-2 col-md-6 border-bottom border-bottom-dark  ">
+                 <div class="col-6 col-md-6 col-sm-6 border-bottom border-bottom-dark  ">
                     <ul type="none" >
                         <li class="my-2">
                             <span class="fw-bold">Material type
@@ -299,7 +414,7 @@
                         </li>
                     </ul>
                     </div>
-                <div class="col-2 col-md-6 border-bottom border-bottom-dark ">
+                <div class="col-6 col-md-6 col-sm-6  border-bottom border-bottom-dark ">
                 <ul type="none" >
                 <li class="my-2">
                     <!-- <span class="fw-bold">Material type
@@ -358,7 +473,7 @@
             
             <h4 class="mt-5 mb-4">Additional Informations</h4>
             <div class="row d-flex">
-                <div class="col-2 col-md-6 border-bottom border-bottom-dark  ">
+                <div class="col-6 col-md-6 col-sm-6 border-bottom border-bottom-dark  ">
                    <ul type="none" >
                        <li class="my-2">
                            <span class="fw-bold">Pattern	
@@ -387,7 +502,7 @@
                     
                    </ul>
                    </div>
-               <div class="col-2 col-md-6 border-bottom border-bottom-dark ">
+               <div class="col-6 col-md-6 col-md-6 border-bottom border-bottom-dark ">
                <ul type="none" >
                <li class="my-2">
                    <!-- <span class="fw-bold">Material type
@@ -429,7 +544,7 @@
 
 
         <!-- cart -->
-        <div style="width: 350px;" class="cart border p-3">
+        <div style="width: 380px; scrollbar-width: none; background-color: #EDE7DD;" class="cart border p-3 ">
             <div class="d-flex justify-content-around ">
                 <div class="">
                     <div class="cart-title fs-4 p-3">Your Cart</div>
@@ -439,32 +554,36 @@
                 <i class="fa-solid fa-xmark fs-3" onclick="cart()"></i>
             </div>
             </div>
-            <div class="cart-section d-flex">
-            <div class="cart-contenet d-flex ">
-                <div class="cart-box w-25">
+            <div class="cart-section overflow-scroll h-75 " style="scrollbar-width: none;">
+            <!-- <div class="cart-contenet d-flex "> -->
+                <!-- <div class="cart-box w-25"> -->
                     <!-- <img class="w-100 h-75 cart-img" src="https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713" alt=""> -->
-                    <img class="w-100 h-75 cart-img" src="" alt="">
-                </div>
-                <div class="cart-detail mx-3">
-                    <!-- <div class="cart-product-title cart-name  text-center ">Bareli Ka Jhumka</div> -->
+                    <!-- <img class="w-100 h-75 cart-img" src="" alt=""> -->
+                <!-- </div> -->
+                <!-- <div class="cart-detail mx-3">
+                    <div class="cart-product-title cart-name  text-center ">Bareli Ka Jhumka</div>
                     <p class="cart-product-title cart-name text-center"></p>
-                    <!-- <span class="cart-product-price cart-price mx-2">₹275.00 INR</span> -->
+                    <span class="cart-product-price cart-price mx-2">₹275.00 INR</span>
                     <p class="cart-product-price cart-price mx-2"></p>
-                </div>
-                <div class="cart-quantity ">
-                    <button class="decrement btn btn-sm btn-dark">-</button>
+                </div> -->
+                <!-- <div class="cart-quantity "> -->
+                    <!-- <button class="decrement btn btn-sm btn-dark">-</button>
                     <span>1</span>
                     <button class="increment btn btn-sm btn-dark">+</button>
-                </div>
+                </div> -->
             </div>
-            </div>
-
-                <!-- <div class="total">
-                    <div class="total-title">total</div>
-                    <div class="total-price">price</div>
+            <div class="total-section border border text-center">
+                <div class="total "> 
+                    <div class="total-title fs-4 ">Total:<span class="total-price">0.00</span> Rs</div>
                 </div>
-                <button class="btn btn-danger" id="btn-close">close</button> -->
-        </div>
+                    <div class="btn-group w-100">
+                        <button class="btn btn-dark" id="btn-close">Buy Now</button> 
+                        <button class="btn btn-danger" id="btn-close" onclick="cart()">Close</button> 
+                    </div>
+                
+            </div>
+            
+            </div>
     </div>
 
     </section>
@@ -497,7 +616,7 @@
                 <p class="card-text text-truncate">Details about this category.Details about this categoryDetails about this categoryDetails about this category
                     Details about this categoryDetails about this categoryDetails about this categoryDetails about this categoryDetails about this category
                 </p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_180x.jpg?v=1654053832%20180w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_360x.jpg?v=1654053832%20360w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_540x.jpg?v=1654053832%20540w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_720x.jpg?v=1654053832%20720w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_900x.jpg?v=1654053832%20900w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1080x.jpg?v=1654053832%201080w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1296x.jpg?v=1654053832%201296w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1512x.jpg?v=1654053832%201512w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1728x.jpg?v=1654053832%201728w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1950x.jpg?v=1654053832%201950w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2100x.jpg?v=1654053832%202100w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2260x.jpg?v=1654053832%202260w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2450x.jpg?v=1654053832%202450w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2700x.jpg?v=1654053832%202700w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3000x.jpg?v=1654053832%203000w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3350x.jpg?v=1654053832%203350w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3750x.jpg?v=1654053832%203750w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_4100x.jpg?v=1654053832%204100w','₹500.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_180x.jpg?v=1654053832%20180w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_360x.jpg?v=1654053832%20360w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_540x.jpg?v=1654053832%20540w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_720x.jpg?v=1654053832%20720w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_900x.jpg?v=1654053832%20900w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1080x.jpg?v=1654053832%201080w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1296x.jpg?v=1654053832%201296w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1512x.jpg?v=1654053832%201512w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1728x.jpg?v=1654053832%201728w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_1950x.jpg?v=1654053832%201950w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2100x.jpg?v=1654053832%202100w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2260x.jpg?v=1654053832%202260w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2450x.jpg?v=1654053832%202450w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_2700x.jpg?v=1654053832%202700w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3000x.jpg?v=1654053832%203000w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3350x.jpg?v=1654053832%203350w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_3750x.jpg?v=1654053832%203750w,%20//thebimba.com/cdn/shop/products/1443-madhubani-painting-artwork_4100x.jpg?v=1654053832%204100w','500.00')">View Details</button>
             </div>
         </div>
         </div>
@@ -508,7 +627,7 @@
                 <img src="https://thebimba.com/cdn/shop/products/1947-laxmi-painting-artwork-black.jpg?v=1654050488" alt="" class="card-img-top category-image">
                 <h5 class="">Category 2</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/1947-laxmi-painting-artwork-black.jpg?v=1654050488','₹780.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/1947-laxmi-painting-artwork-black.jpg?v=1654050488','780.00')">View Details</button>
             
             </div>
         </div>
@@ -521,7 +640,7 @@
                 <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-683.png?v=1654054749" alt="" class="card-img-top category-image">
                 <h5>Category 3</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-683.png?v=1654054749','₹500.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-683.png?v=1654054749','500.00')">View Details</button>
 
             </div>
         </div>
@@ -533,7 +652,7 @@
                 <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2033.png?v=1654051169" alt="" class="card-img-top category-image">
                 <h5>Category 4</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2033.png?v=1654051169','₹200.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2033.png?v=1654051169','200.00')">View Details</button>
 
             </div>
         </div>
@@ -546,7 +665,7 @@
                 <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-678.png?v=1654054803" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-678.png?v=1654054803','₹300.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-678.png?v=1654054803','300.00')">View Details</button>
 
             </div>
         </div>
@@ -559,7 +678,7 @@
                 <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2039.png?v=1654051125 alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2039.png?v=1654051125','₹350.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2039.png?v=1654051125','350.00')">View Details</button>
 
             </div>
         </div>
@@ -572,7 +691,7 @@
             <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2040.png?v=1654051116" alt=""  class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2040.png?v=1654051116','₹450.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2040.png?v=1654051116','350.00')">View Details</button>
 
             </div>
         </div>
@@ -585,7 +704,7 @@
                 <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2027.png?v=1654051220" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2027.png?v=1654051220','₹250.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2027.png?v=1654051220','250.00')">View Details</button>
 
             </div>
         </div>
@@ -597,7 +716,7 @@
                 <img src="https://www.culturalindia.net/iliimages/Madhubani%20painting%202_1.jpg" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://www.culturalindia.net/iliimages/Madhubani%20painting%202_1.jpg','₹450.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://www.culturalindia.net/iliimages/Madhubani%20painting%202_1.jpg','450.00')">View Details</button>
 
             </div>
         </div>
@@ -609,7 +728,7 @@
                 <img src="https://www.culturalindia.net/iliimages/Madhubani%20painting%205.jpg" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://www.culturalindia.net/iliimages/Madhubani%20painting%205.jpg','₹470.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://www.culturalindia.net/iliimages/Madhubani%20painting%205.jpg','470.00')">View Details</button>
 
             </div>
         </div>
@@ -622,7 +741,7 @@
                 <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2041.png?v=1654051108" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/375539068/wuuin_400.webp','₹550.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://images.meesho.com/images/products/375539068/wuuin_400.webp','550.00 ')">View Details</button>
 
             </div>
         </div>
@@ -634,7 +753,7 @@
                 <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2039.png?v=1654051125" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2039.png?v=1654051125','₹250.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockup-2039.png?v=1654051125','250.00 ')">View Details</button>
 
             </div>
         </div>
@@ -646,7 +765,7 @@
                 <img src="https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-683.png?v=1654054749" alt="" class="card-img-top category-image">
                 <h5>Category 5</h5>
                 <p>Details about this category.</p>
-                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-683.png?v=1654054749','₹450.00 INR')">View Details</button>
+                <button class="btn btn-sm btn-dark" onclick="product_details('https://thebimba.com/cdn/shop/products/madhubani-painting-mockups-683.png?v=1654054749','450.00')">View Details</button>
 
             </div>
         </div>
@@ -771,83 +890,84 @@
 </body>
   <!-- <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script> -->
+    <script src="../../../script/addCart.js"/>
 
 <script>
 
-    var MainImg = document.getElementById('MainImg');
-    var product=document.querySelector(".cart-contenet");
-    // const addCart=document.querySelectorAll(".addCart");
-    // var smallimg = document.getElementById('small-img');
+    // var MainImg = document.getElementById('MainImg');
+    // var product=document.querySelector(".cart-contenet");
+    // // const addCart=document.querySelectorAll(".addCart");
+    // // var smallimg = document.getElementById('small-img');
 
-    // function view_deatils()
-    // {
-    //     alert('hello');
+    // // function view_deatils()
+    // // {
+    // //     alert('hello');
+    // // }
+    // function product_details(imgSrc, price) {
+    //     document.getElementById('MainImg').src = imgSrc;
+        
+    //     document.querySelector('#Main-price').innerText = price;
+        
+    //     document.getElementById('MainImg').scrollIntoView({ behavior: 'smooth' });
+    //     // console.log(MainImg);
+
     // }
-    function product_details(imgSrc, price) {
-        document.getElementById('MainImg').src = imgSrc;
-        
-        document.querySelector('#Main-price').innerText = price;
-        
-        document.getElementById('MainImg').scrollIntoView({ behavior: 'smooth' });
-        // console.log(MainImg);
 
-    }
-
-    //main image hover effect
-    function showImg(img)
-    {
-        MainImg.src=img;
-    }
-    function defaultImg()
-    {
-        MainImg.src='https://thebimba.com/cdn/shop/products/1179-madhubani-painting-artwork.jpg?v=1654054700';
-    }
-    function cart()
-    {
-        const cart= document.querySelector(".cart");
-        if (cart.style.display === 'none') {
-                cart.style.display = 'block';
-            } else {
-                cart.style.display = 'none';
-            }
-    }
+    // //main image hover effect
+    // function showImg(img)
+    // {
+    //     MainImg.src=img;
+    // }
+    // function defaultImg()
+    // {
+    //     MainImg.src='https://thebimba.com/cdn/shop/products/1179-madhubani-painting-artwork.jpg?v=1654054700';
+    // }
+    // function cart()
+    // {
+    //     const cart= document.querySelector(".cart");
+    //     if (cart.style.display === 'none') {
+    //             cart.style.display = 'block';
+    //         } else {
+    //             cart.style.display = 'none';
+    //         }
+    // }
     
-    // add product to cart
-    // addCart.addEventListner("click",(src,title,price)=>{
-        // function addCart(img,title,price)
-        // {
-        // document.querySelector(".cart-img").src=img;
-        // document.querySelector(".cart-title").innerText=title;
-        // document.querySelector(".cart-price").innerText=price;
-        // }
-    // })
-    // function hello(img,title,price)
+    // // add product to cart
+    // // addCart.addEventListner("click",(src,title,price)=>{
+    //     // function addCart(img,title,price)
+    //     // {
+    //     // document.querySelector(".cart-img").src=img;
+    //     // document.querySelector(".cart-title").innerText=title;
+    //     // document.querySelector(".cart-price").innerText=price;
+    //     // }
+    // // })
+    // // function hello(img,title,price)
+    // // {
+    // //     document.querySelector(".cart-img").src=img;
+    // //     document.querySelector(".cart-name").innerText=title;
+    // //     document.querySelector(".cart-price").innerText=price;
+    // // }
+    // function hello()
     // {
-    //     document.querySelector(".cart-img").src=img;
-    //     document.querySelector(".cart-name").innerText=title;
-    //     document.querySelector(".cart-price").innerText=price;
-    // }
-    function hello()
-    {
-        const img=MainImg.src;
-        const title=document.querySelector("#Main-title").textContent;
-        const price=document.querySelector("#Main-price").textContent;
-        // alert(img);
-        // const div=document.createElement('div');
-        // const p1=document.createElement('p');
-        // const p2=document.createElement('p');
-        const cimg=document.querySelector(".cart-img").src=img;
-         const ctitle=document.querySelector(".cart-name").textContent=title;
-         const cprice=document.querySelector(".cart-price").textContent=price; 
+    //     const img=MainImg.src;
+    //     const title=document.querySelector("#Main-title").textContent;
+    //     const price=document.querySelector("#Main-price").textContent;
+    //     // alert(img);
+    //     // const div=document.createElement('div');
+    //     // const p1=document.createElement('p');
+    //     // const p2=document.createElement('p');
+    //     const cimg=document.querySelector(".cart-img").src=img;
+    //      const ctitle=document.querySelector(".cart-name").textContent=title;
+    //      const cprice=document.querySelector(".cart-price").textContent=price; 
          
-        // const first=div.appendChild(cimg);
-        //   const first=p1.textContent=title;
-        //   const second=p2.textContent=price;
-        //   div.appendChild(first);
-        //   div.appendChild(second);
-        //   product.appendChild(div);
+    //     // const first=div.appendChild(cimg);
+    //     //   const first=p1.textContent=title;
+    //     //   const second=p2.textContent=price;
+    //     //   div.appendChild(first);
+    //     //   div.appendChild(second);
+    //     //   product.appendChild(div);
 
-    }
+    // }
 </script>
 
 </html>
