@@ -10,6 +10,9 @@
     <title>Unica4u</title>
 
     <!-- Additional CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -23,9 +26,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
      <style>
-        body{
-            background-color:  #EDE7DD;
-        }
+      body{
+        background-color: #EDE7DD;
+        /* font-family: "Afacad Flux", serif;
+
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-variation-settings:
+                                 "slnt" 0; */
+    }
      </style>
         
 
@@ -51,11 +61,11 @@
             <!-- <div class="topbar"> -->
             <div class="container">
                 <div class="row ">
-                    <div class="col-lg-6 col-md-12  d-flex justify-content-around">
+                    <div class="col-lg-8 col-md-12  d-flex justify-content-around">
                         <p class="text-white">business@unica4u.com</p>
                         <p class="text-white ">+91 8484815506</p>
                     </div>
-                    <div class="col-lg-6 col-md-12  d-flex justify-content-end">
+                    <div class="col-lg-4 col-md-12  d-flex justify-content-center">
                         <a class="text-white mx-3" href="#"><i class="fa fa-facebook"></i></a>
                         <a class="text-white mx-3" href="#"><i class="fa fa-twitter"></i></a>
                         <a class="text-white mx-3" href="#"><i class="fa fa-linkedin"></i></a>
@@ -126,9 +136,20 @@
                         </nav>
                     </div>
                     <div class="col-lg-3 col-md-12 d-flex justify-content-center align-items-center">
-                        <i class="fa-regular fa-heart mx-3 fs-4"></i>
+                        <i class="fa-solid fa-magnifying-glass mx-3 fs-4"></i>
+                        <!-- <i class="fa-regular fa-heart mx-3 fs-4"></i> -->
+                        <a href="./wishList.html" class="text-dark"><i class="fa-regular fa-heart mx-3 fs-4 hoverUnderline"></i></a>
                         <i class="fa-solid fa-cart-shopping mx-3 fs-4"></i>
-                        <i class="fa-regular fa-user mx-3 fs-4"></i>
+                        <i class="fa-regular fa-user mx-3 fs-4 dropdown-toggle" data-bs-toggle="dropdown"></i>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign In</a></li>
+                            <li><a class="dropdown-item" href="#">Log Out</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#SignUpModal" href="#">Sign Up</a></li>
+                         </ul>
+                                
+                                
             </div>
             </div>
             
@@ -139,7 +160,7 @@
 
     <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top"> 
-        <div class="container-fluid" style="background-color:  #EDE7DD;;">
+        <div class="container-fluid" style="background-color:  #EDE7DD;">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-content">
@@ -251,7 +272,7 @@
                                     <div class="thumb">
                                         <div class="inner-content">
                                             <!-- <h4>Enthic or Traditional Wear</h4> -->
-                                            <p class="h5 text-white">Enthic or Traditional Wear</p>
+                                            <p class="h5 text-white">Ethnic or Traditional Wear</p>
 
                                             <!-- <span>Best Clothes For Men</span> -->
                                         </div>
@@ -364,7 +385,7 @@
                         <!-- <h4>Madhubani Art</h4> -->
                         <p class="h5">Madhubani Art</p>
                         <p class="h6 text-success fw-bold">Bestsellers</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark ">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary ">Buy Now</a>
                         <a href="./assets/product_items/Art/madhubani_art.html"  class="btn btn-sm btn-primary ">View Details</a>
 
                         <!-- <span>$120.00</span> -->
@@ -382,7 +403,7 @@
                         <!-- <h4>Thanjavur Painting</h4> -->
                         <p class="h5">Thanjavur Painting</p>
                         <p class="h6 text-success fw-bold">Min. 70% Off</p>
-                        <a href="purchase-page.html" target="" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/Art/thanjavur_painting.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$150.00</span> -->
                         <!-- <p>"Quality meets performance, every time."</p> Product tagline -->
@@ -398,7 +419,7 @@
                         <!-- <h4>Warli Painting</h4> -->
                         <p class="h5 ">Warli Painting</p>
                         <p class="h6 text-success fw-bold">Min. 60% Off</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$180.00</span> -->
                         <!-- <p>"A touch of elegance in every detail."</p> Product tagline -->
@@ -415,7 +436,7 @@
                         <!-- <h4>Lippan Art</h4> -->
                         <p class="h5">Lippan Art</p>
                         <p class="h6 text-success fw-bold">Min. 70% Off</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -432,7 +453,7 @@
                         <!-- <h4>Mandala Art</h4> -->
                         <p class="h5">Mandala Art</p>
                         <p class="h6 text-success fw-bold">Bestsellers</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -449,7 +470,7 @@
                         <!-- <h4>Pattachitra Odisha Art</h4> -->
                         <p class="h5">Pattachitra Odisha Art</p>
                         <p class="h6 text-success fw-bold">Min. 70% Off</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -466,7 +487,7 @@
                         <!-- <h4>Kalamkari Painting</h4> -->
                         <p class="h5">Kalamkari Painting </p>
                         <p class="h6 text-success fw-bold">Min. 70% Off</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -483,7 +504,7 @@
                         <!-- <h4>Pattachitra Conch Shell</h4> -->
                         <p class="h5">Pattachitra Conch Shell</p>
                         <p class="h6 text-success fw-bold">Min. 70% Off</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -500,7 +521,7 @@
                         <!-- <h4>Zari Zardozi</h4> -->
                         <p class="h5">Zari Zardozi </p>
                         <p class="h6 text-success fw-bold">Min. 70% Off</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -550,7 +571,7 @@
                         <!-- <h4>Bidri Art: A Legacy of Metalwork​</h4> -->
                         <p class="h5">Bidri Art: A Lagacy of Matalwork </p>
                         <p class="h6 text-success fw-bold">Min. 70% Off</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$120.00</span>
                         <p>"Innovation that defines your style."</p> Product tagline -->
@@ -565,7 +586,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Blue Pottery from Jaipur</h4> -->
                         <p class="h5">Blue Potteyfrom jaipur </p>
-                        <a href="purchase-page.html" target="" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$150.00</span>
                         <p>"Quality meets performance, every time."</p> Product tagline -->
@@ -581,7 +602,7 @@
                         <!-- <h4>Telangana's Dokra Metal Crafts</h4> -->
                         <p class="h5">Telangana's Dokra Metal Crafts</p>
                         <p class="h6 text-success fw-bold">Bestsellers</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark ">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary ">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary ">View Details</a>
                         <!-- <span>$180.00</span>
                         <p>"A touch of elegance in every detail."</p> Product tagline -->
@@ -596,7 +617,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Himachal Pradesh- Metal Craft</h4> -->
                         <p class="h5">Himachal Pradesh- Metal Craft</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class=" mt-4 btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -611,7 +632,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Pondicherry Hand-Pottery</h4> -->
                         <p class="h5">Pondicherry Hand-Pottery </p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4 ">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4 ">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class=" mt-4 btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -627,7 +648,7 @@
                         <!-- <h4>Handcrafted Punjabi Musician</h4> -->
                         <!-- <p class="h5">Handcrafted Punjabi Musician</p> -->
                         <p class="h5">Handcrafted Punjabi Musician </p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
 
                         <!-- <span>$200.00</span>
@@ -644,7 +665,7 @@
                         <p class="h5">Tebetan Handicrafts</p>
                         <p class="h6 text-success fw-bold">Min. 70% Off</p>
 
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark  ">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary  ">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class=" btn btn-sm btn-primary">View Details</a>  
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -659,7 +680,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Marble Handicrafts</h4> -->
                         <p class="h5">Marble Handicrafts </p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -674,7 +695,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Uttar Pradesh - Brass and Metalware</h4> -->
                         <p class="h5">Uttar Pradesh - Brass and Metalware</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-2">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-2">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-2">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -690,7 +711,7 @@
                         <!-- <h4>Haryana Handicrafts</h4> -->
                         <p class="h5">Haryana Handicrafts</p>
                         <p class="h6 text-success fw-bold">Bestsellers</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark  ">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary  ">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary ">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -724,7 +745,7 @@
                     </div>
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Kathakali Face</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$120.00</span>
                         <p>"Innovation that defines your style."</p> Product tagline -->
@@ -740,7 +761,7 @@
                         <!-- <h4>Namaste Lady </h4> -->
                         <p class="h5">Namaste Lady</p>
                         <p class="h6 text-success fw-bold">Bestsellers</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$150.00</span>
                         <p>"Quality meets performance, every time."</p> Product tagline -->
@@ -755,7 +776,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Handmade Carpet of UP</h4> -->
                         <p class="h5">Handmade Carpet of UP</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$180.00</span>
                         <p>"A touch of elegance in every detail."</p> Product tagline -->
@@ -771,7 +792,7 @@
                         <!-- <h4>Thanjavur Toys</h4> -->
                         <p class="h5">Thanjavur Toys</p>
                         <p class="h6 text-success fw-bold">Min. 70% Off</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -786,7 +807,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Aranmula kannadi mirror kerala</p>
                         <p class="h6 text-success fw-bold">Min.70% Off</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -800,7 +821,7 @@
                     </div>
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Channapatna Toys</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary  mt-4">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -814,7 +835,7 @@
                     </div>
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Navalgund Durries: Seating Mats</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -828,7 +849,7 @@
                     </div>
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Papier Machie</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -842,7 +863,7 @@
                     </div>
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Wood Carving</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -856,7 +877,7 @@
                     </div>
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Wooden tea light candle holder</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -870,7 +891,7 @@
                     </div>
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Rajasthani Puppets</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -905,7 +926,7 @@
                         </h4> -->
                         <p class="h5">Himroo Shawl</p>
                         <p class="h6 text-success fw-bold">Bestsellers</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$120.00</span> -->
                         <!-- <p>"Innovation that defines your style."</p> Product tagline -->
@@ -922,7 +943,7 @@
                         <p class="h5">Paithani Saree</p>
                         <p class="h6 text-success fw-bold">Bestsellers</p>
 
-                        <a href="purchase-page.html" target="" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$150.00</span> -->
                         <!-- <p>"Quality meets performance, every time."</p> Product tagline -->
@@ -937,7 +958,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Pashmina Shawl </h4> -->
                         <p class="h5">Pashmina Shawl</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$180.00</span> -->
                         <!-- <p>"A touch of elegance in every detail."</p> Product tagline -->
@@ -952,7 +973,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Aadyam Handwoven Saree and Dupattas -->
                             <p class="h5">Aadyam Handwoven Saree and Dupattas </p>
-                            <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt'">Buy Now</a>
+                            <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt'">Buy Now</a>
                             <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt'">View Details</a>
                         </h4>
                         <!-- <span>$200.00</span> -->
@@ -968,7 +989,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Kanchipuram Silk Sarees</h4> -->
                         <p class="h5">Kanchipuram Silk Sarees</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -983,7 +1004,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Chaniya Choli</h4> -->
                         <p class="h5">Chaniya Choli</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -998,7 +1019,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Angora wool</h4> -->
                         <p class="h5">Angora wool</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -1013,7 +1034,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Pahari Topi</h4> -->
                         <p class="h5">Pahari Topi</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -1028,7 +1049,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Phulkari from Punjab</h4> -->
                         <p class="h5">Phulkari from Punjab </p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -1043,7 +1064,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Puneri Pagadi</h4> -->
                         <p class="h5">Puneri Pagadi</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span> -->
                         <!-- <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -1077,7 +1098,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Bareli Ka Jhummka</p>
                         <p class="h6 text-success fw-bold">Bestsellers</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$120.00</span>
                         <p>"Innovation that defines your style."</p> Product tagline -->
@@ -1091,7 +1112,7 @@
                     </div>
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Minakari Jewellery </p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                          <a href="./assets/product_items/tradition_jewellary/minakari_jewellery.html" target="_blank" class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$150.00</span>
                         <p>"Quality meets performance, every time."</p> Product tagline -->
@@ -1105,7 +1126,7 @@
                     </div>
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">NATH (Nosepin) from Maharashtra</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-2">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-2">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/nosepin.html" target="" class="btn btn-sm btn-primary mt-2">View Details</a>
                         <!-- <span>$180.00</span>
                         <p>"A touch of elegance in every detail."</p> Product tagline -->
@@ -1119,7 +1140,7 @@
                     </div>
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Paana Stone Products (Agra)</p>
-                        <a href="" target="" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="" target="" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/stone_product.html" target="" class="btn  btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -1133,7 +1154,7 @@
                     </div>
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Silver Filigree </p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                      <a href="./assets/product_items/tradition_jewellary/silver_filigree.html" target="" class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$200.00</span>
                         <p>"Designed for excellence, built for you."</p> Product tagline -->
@@ -1265,7 +1286,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <p class="h5">Kolhapuri Chappal</p>
                         <p class="h6 text-success fw-bold">Bestsellers</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary">View Details</a>
                         <!-- <span>$120.00</span>
                         <p>"Innovation that defines your style."</p> Product tagline -->
@@ -1280,7 +1301,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Namaste Lady </h4> -->
                         <p class="h5">Punjabi jufti</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$150.00</span>
                         <p>"Quality meets performance, every time."</p> Product tagline -->
@@ -1295,7 +1316,7 @@
                     <div class="down-content" style="background-color:  #EDE7DD;;">
                         <!-- <h4>Handmade Carpet of UP</h4> -->
                         <p class="h5">Ko Pullas(Himachal pradesh)</p>
-                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-dark mt-4">Buy Now</a>
+                        <a href="purchase-page.html" target="_blank" class="btn btn-sm btn-secondary mt-4">Buy Now</a>
                         <a href="./assets/product_items/tradition_jewellary/jh.html"  class="btn btn-sm btn-primary mt-4">View Details</a>
                         <!-- <span>$180.00</span>
                         <p>"A touch of elegance in every detail."</p> Product tagline -->
@@ -1314,17 +1335,12 @@
                 <div class="col-lg-6">
                     <div class="left-content">
                         <h2>Why Unique Products</h2>
-                        <!-- <span>You are allowed to use this HexaShop HTML CSS template. You can feel free to modify or edit this layout. You can convert this template as any kind of ecommerce CMS theme as you wish.</span> -->
-                         <span>Our unique products are crafted with love, designed to celebrate the beauty of special bonds and heartfelt moments.</span>
-                        <!-- <div class="quote">
-                            <i class="fa fa-quote-left"></i><p>You are not allowed to redistribute this template ZIP file on any other website.</p>
-                        </div>
-                        <p>There are 5 pages included in this HexaShop Template and we are providing it to you for absolutely free of charge at our TemplateMo website. There are web development costs for us.</p>
-                        <p>If this template is beneficial for your website or business, please kindly <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">support us</a> a little via PayPal. Please also tell your friends about our great website. Thank you.</p> -->
-                        <p>Our products are designed to celebrate the beauty of love, making each piece as unique as the bond you share. Crafted with care and attention to detail, they reflect emotions that words often can’t express. Personalized touches and one-of-a-kind designs ensure every product feels special, like a cherished memory brought to life. Inspired by moments of passion, joy, and connection, each creation becomes a timeless symbol of your relationship. These gifts are more than just items—they are heartfelt keepsakes that tell your love story. Every product is made to evoke warmth, closeness, and romance, capturing the magic of your shared moments. With their unique charm, they turn simple gestures into extraordinary expressions of love.</p>
-                        <div class="main-border-button">
+                        <p class="text-secondary">UNICA4U is a platform passionately dedicated to preserving and celebrating the world’s diverse and unique crafts. Starting with India’s rich heritage, our vision is to expand globally, 
+                            bringing exquisite handcrafted treasures to customers All Around the World. <br></br>It is gateway to India's rich heritage of crafts and artistry.
+                       It brings you a curated collection of handcrafted treasures, perfect for gifting or personal indulgence. From Aurangabad's elegant Himroo shawls and Kolhapur's iconic Kolhapuri Chappals to the timeless charm of Bareilly's jhumkas and the luxurious Pashmina shawls of Kashmir to Tanjore paintings of Tamil Nadu,UNICA4U offers the best of India's craftsmanship—all at your fingertips.</p>
+                        <!-- <div class="main-border-button">
                             <a href="products.html">Discover More Unique Products</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -1439,6 +1455,67 @@
         </div>
     </footer>
     
+
+
+    <!-- Modal sign in -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Sign In</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="form">
+            <input type="email" class="form-control" placeholder="enter email"/>
+            <br>
+            <input type="password" class="form-control" placeholder="enter password"/>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-dark">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal Sign up -->
+    <div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Sign Up</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="form">
+                <input type="text" class="form-control" placeholder="abc"/>
+                <br>
+                <input type="email" class="form-control" placeholder="abc@gmail.com" required/>
+                <br>
+                <select class="form-select">
+                    <option selected>Select Role</option>
+                    <option>User</option>
+                    <option>Suppiler</option>
+                </select>
+                <br>
+                <input type="password" class="form-control" placeholder="password"/>
+                <br>
+                <input type="password" class="form-control" placeholder="confirm password" required/>
+              </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+               
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark">Sign Up</button>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
