@@ -17,7 +17,7 @@ function defaultImg() {
     MainImg.src = 'https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713';
 }
 
-function cart() {
+function cartClose() {
     const cart = document.querySelector(".cart");
     cart.style.display = cart.style.display === 'none' ? 'block' : 'none';
 }

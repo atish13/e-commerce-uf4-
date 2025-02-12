@@ -13,6 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
  
     
@@ -140,6 +143,9 @@
     
     body{
         background-color: #EDE7DD;
+        font-family: "Afacad Flux", serif;
+        /* font-size: 20px; */
+
         /* font-family: "Afacad Flux", serif;
         font-optical-sizing: auto;
         font-weight: 300;
@@ -286,10 +292,10 @@
                     </div>
                 </div>
             </div>
-        <!-- </div> -->
-            
         </div>
-        
+            
+            <!-- Navigation  -->
+
             <div class="container-fluid " style="background-color: #EDE7DD;">
                 <div class="container">
                 <div class="row">
@@ -349,10 +355,10 @@
                     </div>
                     <div class="col-lg-3 col-md-12 d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-magnifying-glass fs-4 mx-3 hoverUnderline"></i>
-                        <a href="../../../wishList.html" class="text-dark"><i class="fa-regular fa-heart mx-3 fs-4 hoverUnderline">
-                            <span class="badge badge-light bg-danger rounded-circle" style="position:absolute; top:46px;  font-size: 13px;">0</span>
+                        <a href="../../../wishList.html" class="text-dark position-relative"><i class="fa-regular fa-heart mx-3 fs-4 hoverUnderline">
+                            <span class="badge badge-light bg-danger rounded-circle" style="position:absolute; top:-10px;  font-size: 13px;">0</span>
                         </i></a>
-                        <i class="fa-solid fa-cart-shopping mx-3 fs-4 hoverUnderline" onclick="cart()"><span class="badge badge-light bg-danger rounded-circle add-cart-notify" style="position:relative;top:-20px; font-size: 13px;">0</span></i>
+                        <i class="fa-solid fa-cart-shopping mx-3 fs-4 hoverUnderline" onclick="cartClose()"><span class="badge badge-light bg-danger rounded-circle add-cart-notify" style="position:relative;top:-20px; font-size: 13px;">0</span></i>
                         <i class="fa-regular fa-user mx-3 fs-4 hoverUnderline"></i>
             </div>
             </div>
@@ -361,9 +367,11 @@
     </header>
     
 
-
+     <!-- Main content -->
     <section class="container sproduct mt-5 pt-5">
     <div class="row mt-5">
+
+        <!-- small images section  -->
         <div class="col-lg-1 col-md-2 col-2 text-center">
             <ul type="none" class="">
                 <li>
@@ -391,26 +399,29 @@
                 </li> -->
             </ul>
         </div>
+        <!-- main image section -->
         <div class="col-lg-5 col-md-6 col-10 " id="pro">
 
             <img  class="img-fluid w-100 h-75 fix-img" src="https://thebimba.com/cdn/shop/products/1179-madhubani-painting-artwork.jpg?v=1654054700"  id="MainImg">
              
         </div>
 
+        <!-- images description -->
         <div class="col-lg-5 col-md-12 col-12 px-4  overflow-scroll " style="height: 80vh;scrollbar-width: none;">
-
             <h6>Home / Jhumka</h6>
-            <h3 id="Main-title">Madhubani Art</h3>
+            <p id="Main-title" class="fs-3">Madhubani Art</p>
             <!-- <h2 id="Main-price">₹500.00 INR</h2> -->
-            <h2 id="Main-price">₹<span id="product-price">550.00</span>INR </h2>
+            <p id="Main-price" class="fs-3">₹<span id="product-price">550.00</span>INR </p>
 
 
             <!-- <input type="number" value="1" min="1"> -->
             <!-- <button class="buy-btn btn btn-primary" onclick="hello('https://indiandesigns.com/cdn/shop/files/IMG-20230807-WA0005.jpg?v=1691455860&width=713', 'Bareli ka Jhumka','₹275.00 INR')">Add To Cart</button> -->
             <!-- <button class="buy-btn btn btn-primary" onclick="addToCart()">Add To Cart</button> -->
-            <button class="buy-btn btn btn-dark" id="liveToastBtn">Add To Cart</button>
-            <!-- <button class="buy-btn btn btn-dark">Buy Now</button> -->
-            <span class=" mx-1 fs-3"><i class="fa-regular fa-heart heart pt-3" onclick="myWishlist()"></i></span>
+            <button class="buy-btn btn btn-secondary" id="liveToastBtn">Add To Cart</button>            <!-- <button class="buy-btn btn btn-dark">Buy Now</button> -->
+             <div class="d-inline">
+                <i class="fa-regular fa-heart heart pt-3 fs-3" onclick="myWishlist()"></i>
+
+             </div>
             <h4 class="mt-5 mb-4">Product Details</h4>
             <div class="row d-flex">
                  <div class="col-6 col-md-6 col-sm-6 border-bottom border-bottom-dark  ">
@@ -584,7 +595,7 @@
                 </div>
             <div class="ml-3">
                 <!-- <button class="btn btn-danger btn-sm " onclick="cart()">Cancel</button> -->
-                <i class="fa-solid fa-xmark fs-3" onclick="cart()"></i>
+                <i class="fa-solid fa-xmark fs-3" onclick="cartClose()"></i>
             </div>
             </div>
             <div class="cart-section overflow-scroll h-75 " style="scrollbar-width: none;">
@@ -610,8 +621,8 @@
                     <div class="total-title fs-4 ">Total:<span class="total-price">0.00</span> Rs</div>
                 </div>
                     <div class="btn-group w-100">
-                        <button class="btn btn-dark" id="btn-close">Buy Now</button> 
-                        <button class="btn btn-danger" id="btn-close" onclick="cart()">Close</button> 
+                        <a href="../../../checkout.html" class="btn btn-dark" id="btn-close">Buy Now</a> 
+                        <button class="btn btn-danger" id="btn-close" onclick="cartClose()">Close</button> 
                     </div>
                 
             </div>
@@ -640,7 +651,7 @@
         <p class="display-6 my-5 text-center">You might be interested in</p>
 
        <div class="d-flex flex-wrap justify-content-center gap-2">
-        <!-- Category 1 -->
+        <!-- sub-item 1 -->
          <div class="card">
         <div class="custom-column">
             <div class="custom-card  p-3 text-center">
@@ -658,7 +669,7 @@
             </div>
         </div>
         </div>
-        <!-- Category 2 -->
+        <!-- sub-item 2 -->
          <div class="card">
         <div class="custom-column">
             <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
@@ -670,7 +681,7 @@
             </div>
         </div>
         </div>
-        <!-- Category 3 -->
+        <!-- sub-item 3 -->
          <div class="card">
         <div class="custom-column">
             <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
@@ -683,7 +694,7 @@
             </div>
         </div>
          </div>
-        <!-- Category 4 -->
+        <!-- sub-item 4 -->
          <div class="card">
         <div class="custom-column">
             <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
@@ -696,7 +707,7 @@
         </div>
         </div>
 
-        <!-- Category 5 -->
+        <!-- sub-item 5 -->
          <div class="card">
         <div class="custom-column">
             <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
@@ -709,7 +720,7 @@
         </div>
         </div>
 
-         <!-- Category 6-->
+         <!-- sub-item 6-->
         <div class="card">
         <div class="custom-column">
             <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
@@ -722,7 +733,7 @@
         </div>
         </div>
 
-         <!-- Category 7-->
+         <!-- sub-item 7-->
         <div class="card">
         <div class="custom-column">
             <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
@@ -735,7 +746,7 @@
         </div>
         </div>
 
-        <!-- Category 8-->
+        <!-- sub-item 8-->
         <div class="card">
         <div class="custom-column">
             <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
@@ -747,7 +758,7 @@
             </div>
         </div>
          </div>
-         <!-- Category 9-->
+         <!-- sub-item 9-->
          <div class="card">
         <div class="custom-column pt-4 pb-3 pl-2 pr-2 text-center">
             <div class="custom-card">
@@ -760,6 +771,7 @@
         </div>
         </div>
 
+        <!-- sub-item-10 -->
         <div class="card">
         <div class="custom-column">
             <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
@@ -772,7 +784,7 @@
         </div>
         </div>
 
-        
+        <!-- sub-item-11 -->
         <div class="card">
         <div class="custom-column">
             <div class="custom-card pt-4 pb-3 pl-2 pr-2 text-center">
