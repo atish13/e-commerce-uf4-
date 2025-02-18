@@ -8,7 +8,7 @@ const price = parseFloat(document.querySelector("#product-price").textContent);
            // heartIcon.classList.add("text-danger");
              heartIcon.classList.toggle("text-danger");
             //  notify.textContent=notifyVal+1;
-             Swal.fire({text:"Added in Whishlist 💖"});
+             Swal.fire({text:"Added in Whishlist 💖",confirmButtonColor: "red"});
 
              addWishList();
     }
@@ -17,15 +17,23 @@ const price = parseFloat(document.querySelector("#product-price").textContent);
     {
 
         dataStore();
+    
+    }
 
-       
+    function dataStore()
+    {
+        localStorage.setItem("imgSrc",MainImg);
+        localStorage.setItem("title",title);
+        localStorage.setItem("price",price);  
+    }
+
 
         const content=document.querySelector(".Wishlist-product");
        
 
         const img=document.createElement("img");
-        const p1=document.createElement("p");
-        const p2=document.createElement("p");
+        // const p1=document.createElement("p");
+        // const p2=document.createElement("p");
 
         const row=document.createElement("div");
         row.classList.add("row d-flex px-5 py-3");
@@ -63,12 +71,3 @@ const price = parseFloat(document.querySelector("#product-price").textContent);
 
        
         document.querySelector(".Wishlist-product").append(row);
-    }
-
-    function dataStore()
-    {
-        localStorage.setItem("imgSrc",MainImg);
-        localStorage.setItem("title",title);
-        localStorage.setItem("price",price);
-        
-    }
